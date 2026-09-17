@@ -1,5 +1,5 @@
 // 오프라인 캐시. 파일을 고치면 CACHE 이름의 숫자를 올려야 새 버전이 적용된다.
-const CACHE = "kidsquiz-v5";
+const CACHE = "kidsquiz-v6";
 
 const ASSETS = [
   "./",

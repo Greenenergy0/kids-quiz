@@ -238,7 +238,7 @@ function qAdd(max) {
   const { choices, answer } = numberChoices(sum, 1, max + 5, 4);
   return {
     kind: "add",
-    prompt: `${a} 더하기 ${b}는 얼마일까요?`,
+    prompt: `${a} 더하기 ${b}${particle(b, "은는")} 얼마일까요?`,
     visual: `<span class="calc">${a} + ${b} = ?</span>`,
     visualClass: "visual-calc",
     choices,
@@ -255,7 +255,7 @@ function qSub(max) {
   const { choices, answer } = numberChoices(diff, 0, max, 4);
   return {
     kind: "sub",
-    prompt: `${a} 빼기 ${b}는 얼마일까요?`,
+    prompt: `${a} 빼기 ${b}${particle(b, "은는")} 얼마일까요?`,
     visual: `<span class="calc">${a} − ${b} = ?</span>`,
     visualClass: "visual-calc",
     choices,
@@ -273,7 +273,7 @@ function qMultiply(maxTable) {
   const { choices, answer } = numberChoices(product, 2, product + 12, 4);
   return {
     kind: "multiply",
-    prompt: `${a} 곱하기 ${b}는 얼마일까요?`,
+    prompt: `${a} 곱하기 ${b}${particle(b, "은는")} 얼마일까요?`,
     visual: `<span class="calc">${a} × ${b} = ?</span>`,
     visualClass: "visual-calc",
     choices,

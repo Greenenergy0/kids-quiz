@@ -171,7 +171,9 @@ function listenMath(age) {
   const options = shuffle([result, result + gap, Math.max(0, result - gap)]);
   return {
     kind: "listenMath",
-    prompt: plus ? `${a} 더하기 ${b}는 얼마일까요?` : `${a} 빼기 ${b}는 얼마일까요?`,
+    prompt: plus
+      ? `${a} 더하기 ${b}${particle(b, "은는")} 얼마일까요?`
+      : `${a} 빼기 ${b}${particle(b, "은는")} 얼마일까요?`,
     choices: [...new Set(options)].map(String),
     answer: [...new Set(options)].indexOf(result),
     choiceStyle: "text",
@@ -186,7 +188,7 @@ function listenEnToKo() {
   const target = pick(options);
   return {
     kind: "listenEnToKo",
-    prompt: `"${target.en}"은 무슨 뜻일까요?`,
+    prompt: `"${target.en}"! 무슨 뜻일까요?`,
     speakParts: [
       { text: target.en, lang: "en" },
       { text: "무슨 뜻일까요?", lang: "ko" }
