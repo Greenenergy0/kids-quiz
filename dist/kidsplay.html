@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>같이 놀자</title>
+
+  <meta name="theme-color" content="#7dd3fc">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="같이 놀자">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <link rel="icon" href="data:image/png;base64,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">
+
+  <style>
+:root {
+  --bg1: #7dd3fc;
+  --bg2: #c4b5fd;
+  --card: #ffffff;
+  --ink: #33324a;
+  --ink-soft: #6b6a85;
+  --primary: #ff8a3d;
+  --primary-dark: #f2702a;
+  --ok: #22c55e;
+  --no: #ef4444;
+  --line: #e9e7f5;
+  --radius: 28px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  /* 차 안에서도 인터넷 없이 떠야 하므로 웹폰트를 쓰지 않는다 */
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--bg1), var(--bg2));
+  background-attachment: fixed;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 96px;
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 26px 20px;
+  box-shadow: 0 14px 30px rgba(60, 50, 120, 0.18);
+}
+
+.center { text-align: center; }
+
+.hero {
+  font-size: 84px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 34px;
+  margin: 6px 0 4px;
+}
+
+.ask {
+  font-size: 30px;
+  margin: 0 0 20px;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.sub {
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin: 6px 0 20px;
+  line-height: 1.5;
+}
+
+.step {
+  text-align: center;
+  font-size: 18px;
+  color: var(--primary-dark);
+  margin: 0 0 6px;
+}
+
+/* ---- 버튼 ---- */
+
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 18px 20px;
+  font-family: inherit;
+  font-size: 24px;
+  color: #fff;
+  background: var(--primary);
+  box-shadow: 0 6px 0 var(--primary-dark);
+  cursor: pointer;
+  margin-top: 14px;
+  transition: transform 0.08s ease;
+}
+
+.btn.big { font-size: 28px; padding: 22px 20px; }
+.btn.small { font-size: 18px; padding: 12px 16px; }
+
+.btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--primary-dark); }
+
+.btn.ghost {
+  background: #f4f2ff;
+  color: var(--ink);
+  box-shadow: 0 4px 0 var(--line);
+}
+
+.btn .hint {
+  display: block;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+/* ---- 인원수 ---- */
+
+.count-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.count-btn {
+  border: 3px solid var(--line);
+  background: #fff;
+  border-radius: 22px;
+  padding: 18px 8px;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.count-btn:active { background: #fff4ec; border-color: var(--primary); }
+.count-num { font-size: 40px; color: var(--primary-dark); }
+.count-label { font-size: 17px; color: var(--ink-soft); }
+
+/* ---- 이름/나이 ---- */
+
+.name-input {
+  width: 100%;
+  border: 3px solid var(--line);
+  border-radius: 20px;
+  padding: 18px;
+  font-family: inherit;
+  font-size: 28px;
+  text-align: center;
+  color: var(--ink);
+  outline: none;
+}
+
+.name-input:focus { border-color: var(--primary); }
+
+.shake { animation: shake 0.35s; }
+
+@keyframes shake {
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-5px); }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.chips-label { font-size: 16px; color: var(--ink-soft); }
+
+.chip {
+  border: 2px solid var(--line);
+  background: #f8f7ff;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 19px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.step-btn {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: none;
+  background: #f4f2ff;
+  color: var(--primary-dark);
+  font-size: 40px;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--line);
+}
+
+.step-btn:active { transform: translateY(3px); box-shadow: none; }
+
+.age-display {
+  min-width: 120px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.age-num { font-size: 64px; color: var(--primary-dark); }
+.age-unit { font-size: 26px; color: var(--ink-soft); }
+
+/* ---- 참가자 목록 ---- */
+
+.roster, .result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roster li, .result-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f7ff;
+  border-radius: 18px;
+  padding: 12px 16px;
+  font-size: 22px;
+}
+
+.result-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 10px;
+}
+
+.result-list .who { grid-area: 1 / 1; }
+.result-list .tally { grid-area: 1 / 2; }
+.result-list .stars.small { grid-area: 2 / 1 / 2 / -1; text-align: left; }
+
+.avatar { font-size: 30px; }
+.who { flex: 1; text-align: left; white-space: nowrap; }
+.who small { font-size: 16px; color: var(--ink-soft); }
+.who-age { color: var(--ink-soft); font-size: 19px; }
+.tally { font-size: 20px; color: var(--primary-dark); white-space: nowrap; }
+
+.stars { font-size: 30px; letter-spacing: 2px; margin: 4px 0 8px; }
+.stars.small { font-size: 16px; letter-spacing: 0; flex: 1; text-align: right; }
+
+/* ---- 퀴즈 ---- */
+
+.quiz-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.who-pill {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 20px;
+}
+
+.dots { flex: 1; display: flex; gap: 6px; justify-content: center; }
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dot.done { background: var(--primary); }
+.dot.now { background: #fff; box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.45); }
+
+.replay {
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.quiz-card { padding: 20px 16px; }
+
+.visual {
+  background: #f8f7ff;
+  border-radius: 22px;
+  padding: 18px 12px;
+  margin-bottom: 16px;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.visual-emoji { font-size: 44px; word-break: break-word; }
+.visual-emoji span { display: inline-block; margin: 2px; }
+.visual-emoji .op { font-size: 36px; color: var(--primary-dark); margin: 0 8px; }
+
+.swatch-big {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  box-shadow: inset 0 -6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.shape-big { font-size: 96px; color: var(--primary); }
+.calc { font-size: 48px; letter-spacing: 2px; }
+
+.series { font-size: 40px; display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.series .blank { color: var(--primary-dark); }
+
+.question {
+  font-size: 27px;
+  text-align: center;
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+.choices { display: grid; gap: 12px; }
+.choices--number, .choices--color, .choices--shape, .choices--emoji { grid-template-columns: repeat(2, 1fr); }
+.choices--group { grid-template-columns: repeat(2, 1fr); }
+
+.choice {
+  border: 3px solid var(--line);
+  background: #fff;
+  border-radius: 22px;
+  padding: 18px 14px;
+  font-family: inherit;
+  font-size: 24px;
+  color: var(--ink);
+  cursor: pointer;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.08s ease;
+}
+
+.choice:active:not(:disabled) { transform: scale(0.97); }
+.choice:disabled { cursor: default; opacity: 0.85; }
+
+.choice--number { flex-direction: column; gap: 4px; }
+.choice--number .digit { font-size: 40px; color: var(--primary-dark); }
+.choice--number .dotrow {
+  font-size: 13px;
+  color: var(--primary);
+  letter-spacing: 2px;
+  line-height: 1;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.choice--text { justify-content: flex-start; text-align: left; font-size: 22px; }
+.choice--text .badge {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f4f2ff;
+  color: var(--primary-dark);
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice--color { min-height: 104px; border-color: rgba(0, 0, 0, 0.08); }
+.choice--shape { font-size: 56px; color: var(--primary); }
+.choice--emoji { font-size: 52px; min-height: 100px; }
+.choice--group { font-size: 30px; flex-wrap: wrap; min-height: 110px; }
+.choice--group span { display: inline-block; margin: 2px; }
+
+.choice.correct { border-color: var(--ok); background: #eafaf0; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18); }
+.choice.wrong { border-color: var(--no); background: #fdeeee; }
+
+.feedback { margin-top: 18px; }
+
+.fb {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+.fb.ok { color: var(--ok); }
+.fb.no { color: var(--no); }
+
+/* ---- 상단 바 ---- */
+
+.pill-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.star-count {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(60, 50, 120, 0.35);
+}
+
+.who-line {
+  text-align: center;
+  font-size: 19px;
+  color: var(--primary-dark);
+  margin: 0 0 12px;
+}
+
+/* ---- 이야기 ---- */
+
+.story-card { padding: 24px 20px; text-align: center; }
+.story-emoji { font-size: 72px; line-height: 1.1; }
+.story-title { font-size: 25px; margin: 4px 0 16px; }
+
+.story-text {
+  font-size: 22px;
+  line-height: 1.65;
+  text-align: left;
+  background: #f8f7ff;
+  border-radius: 20px;
+  padding: 18px;
+  margin: 0 0 14px;
+}
+
+.story-progress { font-size: 15px; color: var(--ink-soft); letter-spacing: 3px; margin: 0; }
+
+.talk-text {
+  font-size: 23px;
+  line-height: 1.6;
+  background: #f8f7ff;
+  border-radius: 20px;
+  padding: 18px;
+  margin: 8px 0 4px;
+}
+
+/* ---- 따라 말하기 ---- */
+
+.phrase-card { padding: 26px 20px; }
+.phrase-en { font-size: 40px; color: var(--primary-dark); margin: 6px 0 8px; }
+.phrase-ko { font-size: 22px; color: var(--ink-soft); margin: 0 0 8px; }
+
+/* ---- 끝말잇기 ---- */
+
+.chain-word {
+  font-size: 48px;
+  color: var(--primary-dark);
+  background: #f8f7ff;
+  border-radius: 22px;
+  padding: 16px 12px;
+  margin: 0 0 14px;
+}
+
+.chain-trail {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  background: #f8f7ff;
+  border-radius: 20px;
+  padding: 16px;
+  margin: 4px 0 8px;
+}
+
+/* ---- 정답 확인 ---- */
+
+.fb-row { display: flex; gap: 10px; }
+.fb-row .btn { flex: 1; }
+
+.btn.mode {
+  background: #eef6ff;
+  color: var(--ink);
+  box-shadow: 0 4px 0 #d7e7f8;
+  font-size: 20px;
+}
+
+/* ---- 놀이 고르기 ---- */
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.hub-btn {
+  border: 3px solid var(--line);
+  background: #fff;
+  border-radius: 22px;
+  padding: 18px 8px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.hub-btn:active { background: #fff4ec; border-color: var(--primary); }
+.hub-emoji { font-size: 40px; }
+.hub-label { font-size: 18px; color: var(--ink); }
+
+/* ---- 목소리 고르기 ---- */
+
+.voice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.voice-btn {
+  border: 3px solid var(--line);
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.voice-btn.current { border-color: var(--primary); background: #fff6ef; }
+.voice-name { font-size: 19px; color: var(--ink); }
+.voice-tag { font-size: 15px; color: var(--ink-soft); }
+
+/* ---- 소리 토글 ---- */
+
+.sound-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(60, 50, 120, 0.25);
+}
+
+@media (min-width: 700px) {
+  .app { padding-top: 40px; }
+  .ask { font-size: 34px; }
+  .question { font-size: 30px; }
+}
+
+</style>
+</head>
+<body>
+  <main id="app" class="app"></main>
+
+  <button id="sound-toggle" class="sound-toggle" type="button" aria-label="소리 켜기 끄기">🔊</button>
+
+  <script>
+    // 폰에는 콘솔이 없으니, 시작하다 막히면 빈 화면 대신 이유를 보여 준다.
+    window.addEventListener("error", function (event) {
+      var root = document.getElementById("app");
+      if (root && !root.innerHTML.trim()) {
+        root.innerHTML = '<section class="card"><h2 class="ask">앗, 여기서 막혔어요</h2>' +
+          '<p class="sub">' + String(event.message || event).replace(/</g, "&lt;") + '</p></section>';
+      }
+    });
+  </script>
+
+  <script>
+// ---- js/store.js ----
+// 설정 저장. 파일(file://)로 열거나 시크릿 모드면 브라우저가 localStorage를 막고
+// 접근만 해도 예외를 던진다. 그때도 앱은 그냥 돌아가야 하므로 전부 감싸 둔다.
+const Store = (function () {
+  function get(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  }
+
+  function set(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      /* 저장은 못 하지만 이번 판은 계속 놀 수 있다 */
+    }
+  }
+
+  function remove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch {
+      /* 무시 */
+    }
+  }
+
+  return { get, set, remove };
+})();
+
+// ---- js/quiz.js ----
+// 손으로 적어둔 상식 문제 은행. 여기에 계속 추가하면 됩니다.
+// answer : choices 배열의 인덱스(0부터 시작)
+// age    : 권장 나이(3~7). 아이 나이 ±1살 범위에서 골라 씁니다.
+const QUESTION_BANK = [
+  // 3세
+  {
+    age: 3,
+    question: "사과는 무슨 색일까요?",
+    choices: ["노란색", "빨간색", "파란색", "검은색"],
+    answer: 1
+  },
+  {
+    age: 3,
+    question: "강아지는 어떻게 울까요?",
+    choices: ["야옹", "멍멍", "음메", "꽥꽥"],
+    answer: 1
+  },
+  {
+    age: 3,
+    question: "바나나는 무슨 색일까요?",
+    choices: ["노란색", "초록색", "보라색", "하얀색"],
+    answer: 0
+  },
+  {
+    age: 3,
+    question: "하늘은 무슨 색일까요?",
+    choices: ["파란색", "빨간색", "검은색", "분홍색"],
+    answer: 0
+  },
+  {
+    age: 3,
+    question: "고양이는 어떻게 울까요?",
+    choices: ["멍멍", "야옹", "꿀꿀", "짹짹"],
+    answer: 1
+  },
+
+  // 4세
+  {
+    age: 4,
+    question: "사과 2개에 1개를 더하면 모두 몇 개일까요?",
+    choices: ["2개", "3개", "4개", "5개"],
+    answer: 1
+  },
+  {
+    age: 4,
+    question: "다음 중 동그란 모양은 무엇일까요?",
+    choices: ["세모", "네모", "동그라미", "별"],
+    answer: 2
+  },
+  {
+    age: 4,
+    question: "한 손에 손가락은 몇 개일까요?",
+    choices: ["3개", "4개", "5개", "6개"],
+    answer: 2
+  },
+  {
+    age: 4,
+    question: "밤하늘에서 반짝반짝 빛나는 것은 무엇일까요?",
+    choices: ["해", "별", "구름", "비"],
+    answer: 1
+  },
+  {
+    age: 4,
+    question: "물고기는 어디에서 살까요?",
+    choices: ["하늘", "물속", "땅속", "나무 위"],
+    answer: 1
+  },
+  {
+    age: 4,
+    question: "소리를 듣는 몸의 기관은 어디일까요?",
+    choices: ["눈", "귀", "코", "입"],
+    answer: 1
+  },
+
+  // 5세
+  {
+    age: 5,
+    question: "물이 꽁꽁 얼면 무엇이 될까요?",
+    choices: ["수증기", "얼음", "구름", "안개"],
+    answer: 1
+  },
+  {
+    age: 5,
+    question: "봄 다음에 오는 계절은 무엇일까요?",
+    choices: ["여름", "가을", "겨울", "봄"],
+    answer: 0
+  },
+  {
+    age: 5,
+    question: "일주일은 며칠일까요?",
+    choices: ["5일", "6일", "7일", "8일"],
+    answer: 2
+  },
+  {
+    age: 5,
+    question: "나비는 어떤 모습을 거쳐서 어른이 될까요?",
+    choices: ["올챙이", "애벌레", "병아리", "새끼 고양이"],
+    answer: 1
+  },
+  {
+    age: 5,
+    question: "다음 중 채소가 아닌 것은 무엇일까요?",
+    choices: ["당근", "오이", "사과", "배추"],
+    answer: 2
+  },
+  {
+    age: 5,
+    question: "우리나라의 수도는 어디일까요?",
+    choices: ["부산", "대전", "서울", "광주"],
+    answer: 2
+  },
+  {
+    age: 5,
+    question: "식물이 자라는 데 꼭 필요하지 않은 것은 무엇일까요?",
+    choices: ["햇빛", "물", "공기", "텔레비전"],
+    answer: 3
+  },
+
+  // 6세
+  {
+    age: 6,
+    question: "무지개는 보통 몇 가지 색으로 이루어져 있을까요?",
+    choices: ["3가지", "5가지", "7가지", "10가지"],
+    answer: 2
+  },
+  {
+    age: 6,
+    question: "개미의 다리는 모두 몇 개일까요?",
+    choices: ["4개", "6개", "8개", "10개"],
+    answer: 1
+  },
+  {
+    age: 6,
+    question: "하루는 몇 시간일까요?",
+    choices: ["12시간", "24시간", "36시간", "48시간"],
+    answer: 1
+  },
+  {
+    age: 6,
+    question: "1년은 몇 개월일까요?",
+    choices: ["10개월", "12개월", "14개월", "24개월"],
+    answer: 1
+  },
+  {
+    age: 6,
+    question: "5 + 7 은 얼마일까요?",
+    choices: ["10", "11", "12", "13"],
+    answer: 2
+  },
+  {
+    age: 6,
+    question: "다음 중 가장 큰 동물은 무엇일까요?",
+    choices: ["코끼리", "기린", "흰긴수염고래", "하마"],
+    answer: 2
+  },
+
+  // 7세
+  {
+    age: 7,
+    question: "태양계에서 가장 큰 행성은 무엇일까요?",
+    choices: ["지구", "목성", "화성", "금성"],
+    answer: 1
+  },
+  {
+    age: 7,
+    question: "태극기에서 볼 수 없는 색깔은 무엇일까요?",
+    choices: ["빨강", "파랑", "초록", "검정"],
+    answer: 2
+  },
+  {
+    age: 7,
+    question: "한글을 만든 임금님은 누구일까요?",
+    choices: ["세종대왕", "이순신", "광개토대왕", "장영실"],
+    answer: 0
+  },
+  {
+    age: 7,
+    question: "다음 중 새가 아닌 동물은 무엇일까요?",
+    choices: ["참새", "박쥐", "비둘기", "까치"],
+    answer: 1
+  },
+  {
+    age: 7,
+    question: "다음 중 포유류는 무엇일까요?",
+    choices: ["개구리", "돌고래", "악어", "참새"],
+    answer: 1
+  },
+  {
+    age: 7,
+    question: "물이 100도가 되면 어떻게 될까요?",
+    choices: ["얼어요", "끓어요", "단단해져요", "사라져요"],
+    answer: 1
+  }
+];
+
+// ---- js/questions.js ----
+// 문제 생성기 + 고정 문제 은행.
+// 문제 객체 형태:
+// { kind, prompt, speak, visual, visualClass, choices, answer, choiceStyle, key }
+// choiceStyle: "number" | "text" | "color" | "shape" | "group"
+
+const COLORS = [
+  { name: "빨간색", hex: "#ef4444" },
+  { name: "파란색", hex: "#3b82f6" },
+  { name: "노란색", hex: "#facc15" },
+  { name: "초록색", hex: "#22c55e" },
+  { name: "보라색", hex: "#a855f7" },
+  { name: "주황색", hex: "#fb923c" },
+  { name: "분홍색", hex: "#f472b6" },
+  { name: "갈색", hex: "#a16207" }
+];
+
+const SHAPES = [
+  { glyph: "●", name: "동그라미" },
+  { glyph: "▲", name: "세모" },
+  { glyph: "■", name: "네모" },
+  { glyph: "★", name: "별" },
+  { glyph: "♥", name: "하트" }
+];
+
+const THINGS = [
+  { emoji: "🍎", name: "사과", unit: "개" },
+  { emoji: "🍌", name: "바나나", unit: "개" },
+  { emoji: "🍓", name: "딸기", unit: "개" },
+  { emoji: "🍭", name: "사탕", unit: "개" },
+  { emoji: "🎈", name: "풍선", unit: "개" },
+  { emoji: "⭐", name: "별", unit: "개" },
+  { emoji: "🚗", name: "자동차", unit: "대" },
+  { emoji: "🐶", name: "강아지", unit: "마리" },
+  { emoji: "🐱", name: "고양이", unit: "마리" },
+  { emoji: "🐤", name: "병아리", unit: "마리" },
+  { emoji: "🐟", name: "물고기", unit: "마리" },
+  { emoji: "🦋", name: "나비", unit: "마리" }
+];
+
+// 숫자를 소리 내어 읽었을 때 받침이 있는지 (1 일, 3 삼, 6 육, 7 칠, 8 팔, 0 영/십)
+const DIGIT_BATCHIM = {
+  "0": true, "1": true, "2": false, "3": true, "4": false,
+  "5": false, "6": true, "7": true, "8": true, "9": false
+};
+
+function hasBatchim(word) {
+  const last = String(word).slice(-1);
+  if (last >= "0" && last <= "9") return DIGIT_BATCHIM[last];
+  const code = last.charCodeAt(0);
+  const isHangul = code >= 0xac00 && code <= 0xd7a3;
+  return isHangul && (code - 0xac00) % 28 !== 0;
+}
+
+// 받침 유무에 따라 조사를 골라준다. pair 예: "은는", "이가", "을를"
+function particle(word, pair) {
+  return hasBatchim(word) ? pair[0] : pair[1];
+}
+
+// "~로" / "~으로" (받침이 없거나 ㄹ이면 '로')
+function roParticle(word) {
+  const code = String(word).slice(-1).charCodeAt(0);
+  const isHangul = code >= 0xac00 && code <= 0xd7a3;
+  if (!isHangul) return "로";
+  const batchim = (code - 0xac00) % 28;
+  return batchim === 0 || batchim === 8 ? "로" : "으로";
+}
+
+function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function shuffle(items) {
+  const a = [...items];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pick(items) {
+  return items[randInt(0, items.length - 1)];
+}
+
+function pickMany(items, n) {
+  return shuffle(items).slice(0, n);
+}
+
+// 정답 주변의 숫자로 보기를 만든다.
+function numberChoices(answer, min, max, n) {
+  const candidates = new Set();
+  for (let gap = 1; gap <= 5 && candidates.size < 12; gap++) {
+    if (answer - gap >= min) candidates.add(answer - gap);
+    if (answer + gap <= max) candidates.add(answer + gap);
+  }
+  const distractors = shuffle([...candidates]).slice(0, n - 1);
+  const values = shuffle([answer, ...distractors]);
+  return { choices: values.map(String), answer: values.indexOf(answer) };
+}
+
+function repeatEmoji(emoji, count) {
+  return Array.from({ length: count }, () => `<span>${emoji}</span>`).join("");
+}
+
+// ---- 문제 생성기 ----
+
+function qCount(max) {
+  const thing = pick(THINGS);
+  const n = randInt(1, max);
+  const { choices, answer } = numberChoices(n, 1, Math.max(max + 2, 6), 3);
+  return {
+    kind: "count",
+    prompt: `모두 몇 ${thing.unit}일까요?`,
+    visual: repeatEmoji(thing.emoji, n),
+    visualClass: "visual-emoji",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `count-${thing.name}-${n}`
+  };
+}
+
+function qColorFind() {
+  const options = pickMany(COLORS, 4);
+  const target = pick(options);
+  return {
+    kind: "colorFind",
+    prompt: `${target.name}${particle(target.name, "은는")} 어디 있을까요?`,
+    visual: "🎨",
+    visualClass: "visual-emoji",
+    choices: options,
+    answer: options.indexOf(target),
+    choiceStyle: "color",
+    key: `colorFind-${target.name}`
+  };
+}
+
+function qColorName() {
+  const options = pickMany(COLORS, 3);
+  const target = pick(options);
+  return {
+    kind: "colorName",
+    prompt: "이건 무슨 색일까요?",
+    visual: `<span class="swatch-big" style="background:${target.hex}"></span>`,
+    visualClass: "visual-swatch",
+    choices: options.map((c) => c.name),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    key: `colorName-${target.name}`
+  };
+}
+
+function qShapeFind() {
+  const options = pickMany(SHAPES, 4);
+  const target = pick(options);
+  return {
+    kind: "shapeFind",
+    prompt: `${target.name}${particle(target.name, "은는")} 어디 있을까요?`,
+    visual: "🔍",
+    visualClass: "visual-emoji",
+    choices: options.map((s) => s.glyph),
+    answer: options.indexOf(target),
+    choiceStyle: "shape",
+    key: `shapeFind-${target.name}`
+  };
+}
+
+function qShapeName() {
+  const options = pickMany(SHAPES, 3);
+  const target = pick(options);
+  return {
+    kind: "shapeName",
+    prompt: "이건 무슨 모양일까요?",
+    visual: `<span class="shape-big">${target.glyph}</span>`,
+    visualClass: "visual-shape",
+    choices: options.map((s) => s.name),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    key: `shapeName-${target.name}`
+  };
+}
+
+function qCompare(max) {
+  const thing = pick(THINGS);
+  let left = randInt(1, max);
+  let right = randInt(1, max);
+  while (left === right) right = randInt(1, max);
+  const groups = [repeatEmoji(thing.emoji, left), repeatEmoji(thing.emoji, right)];
+  return {
+    kind: "compare",
+    prompt: "어느 쪽이 더 많을까요?",
+    visual: null,
+    choices: groups,
+    answer: left > right ? 0 : 1,
+    answerLabel: left > right ? "왼쪽" : "오른쪽",
+    choiceStyle: "group",
+    key: `compare-${thing.name}-${left}-${right}`
+  };
+}
+
+function qNumberFind(max) {
+  const target = randInt(1, max);
+  const { choices, answer } = numberChoices(target, 1, max + 2, 3);
+  return {
+    kind: "numberFind",
+    prompt: `숫자 ${target}${particle(target, "은는")} 어디 있을까요?`,
+    visual: "🔢",
+    visualClass: "visual-emoji",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `numberFind-${target}`
+  };
+}
+
+function qAddVisual(max) {
+  const thing = pick(THINGS);
+  const a = randInt(1, Math.max(1, max - 1));
+  const b = randInt(1, max - a);
+  const sum = a + b;
+  const { choices, answer } = numberChoices(sum, 1, max + 3, 3);
+  return {
+    kind: "addVisual",
+    prompt: `${thing.name} ${a}${thing.unit}에 ${b}${thing.unit}를 더하면 모두 몇 ${thing.unit}일까요?`,
+    visual: `${repeatEmoji(thing.emoji, a)}<span class="op">＋</span>${repeatEmoji(thing.emoji, b)}`,
+    visualClass: "visual-emoji",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `addVisual-${a}-${b}`
+  };
+}
+
+function qAdd(max) {
+  const a = randInt(1, max - 1);
+  const b = randInt(1, max - a);
+  const sum = a + b;
+  const { choices, answer } = numberChoices(sum, 1, max + 5, 4);
+  return {
+    kind: "add",
+    prompt: `${a} 더하기 ${b}는 얼마일까요?`,
+    visual: `<span class="calc">${a} + ${b} = ?</span>`,
+    visualClass: "visual-calc",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `add-${a}-${b}`
+  };
+}
+
+function qSub(max) {
+  const a = randInt(2, max);
+  const b = randInt(1, a - 1);
+  const diff = a - b;
+  const { choices, answer } = numberChoices(diff, 0, max, 4);
+  return {
+    kind: "sub",
+    prompt: `${a} 빼기 ${b}는 얼마일까요?`,
+    visual: `<span class="calc">${a} − ${b} = ?</span>`,
+    visualClass: "visual-calc",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `sub-${a}-${b}`
+  };
+}
+
+function qMultiply(maxTable) {
+  const tables = maxTable <= 5 ? [2, 5] : [2, 3, 4, 5, 6, 7, 8, 9];
+  const a = pick(tables);
+  const b = randInt(2, 9);
+  const product = a * b;
+  const { choices, answer } = numberChoices(product, 2, product + 12, 4);
+  return {
+    kind: "multiply",
+    prompt: `${a} 곱하기 ${b}는 얼마일까요?`,
+    visual: `<span class="calc">${a} × ${b} = ?</span>`,
+    visualClass: "visual-calc",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `multiply-${a}-${b}`
+  };
+}
+
+function qSequence(max, step) {
+  const gap = step || 1;
+  const start = randInt(1, Math.max(1, max - gap * 4));
+  const series = [0, 1, 2, 3, 4].map((i) => start + i * gap);
+  const hideAt = randInt(1, 3);
+  const target = series[hideAt];
+  const shown = series
+    .map((n, i) => (i === hideAt ? `<span class="blank">?</span>` : `<span>${n}</span>`))
+    .join("");
+  const { choices, answer } = numberChoices(target, 1, max + gap * 2, 3);
+  return {
+    kind: "sequence",
+    prompt: "빈칸에 들어갈 숫자는 무엇일까요?",
+    visual: `<span class="series">${shown}</span>`,
+    visualClass: "visual-series",
+    choices,
+    answer,
+    choiceStyle: "number",
+    key: `sequence-${start}-${gap}-${hideAt}`
+  };
+}
+
+function qBigger(max) {
+  const a = randInt(1, max);
+  let b = randInt(1, max);
+  while (a === b) b = randInt(1, max);
+  const values = [a, b];
+  return {
+    kind: "bigger",
+    prompt: "어느 숫자가 더 클까요?",
+    visual: null,
+    choices: values.map(String),
+    answer: a > b ? 0 : 1,
+    choiceStyle: "number",
+    key: `bigger-${a}-${b}`
+  };
+}
+
+// ---- 나이별 난이도 ----
+
+function generatorsForAge(age) {
+  if (age <= 4) {
+    return [
+      () => qCount(5),
+      () => qColorFind(),
+      () => qShapeFind(),
+      () => qCompare(4),
+      () => qNumberFind(5),
+      () => qColorName()
+    ];
+  }
+  if (age <= 6) {
+    return [
+      () => qCount(10),
+      () => qAddVisual(8),
+      () => qCompare(8),
+      () => qColorName(),
+      () => qShapeName(),
+      () => qSequence(10, 1),
+      () => qBigger(10)
+    ];
+  }
+  if (age <= 8) {
+    return [
+      () => qAdd(20),
+      () => qSub(20),
+      () => qSequence(20, pick([1, 2])),
+      () => qBigger(50),
+      () => qCount(15),
+      () => qMultiply(5)
+    ];
+  }
+  return [
+    () => qAdd(100),
+    () => qSub(100),
+    () => qMultiply(9),
+    () => qSequence(50, pick([2, 3, 5])),
+    () => qBigger(100)
+  ];
+}
+
+// 고정 문제 은행에서 나이에 맞는 문제를 고른다.
+function curatedForAge(age) {
+  return QUESTION_BANK
+    .filter((q) => Math.abs(q.age - age) <= 1)
+    .map((q) => ({
+      kind: "curated",
+      prompt: q.question,
+      visual: "🤔",
+      visualClass: "visual-emoji",
+      choices: q.choices,
+      answer: q.answer,
+      choiceStyle: "text",
+      key: `curated-${q.question}`
+    }));
+}
+
+// 한 사람이 풀 문제 묶음을 만든다.
+function buildQuiz(age, count) {
+  const total = count || 5;
+  const curatedWanted = age <= 4 ? 1 : 2;
+  const curated = pickMany(curatedForAge(age), curatedWanted);
+  const generators = generatorsForAge(age);
+  const used = new Set(curated.map((q) => q.key));
+  const generated = [];
+
+  let guard = 0;
+  while (generated.length < total - curated.length && guard < 200) {
+    guard++;
+    const q = pick(generators)();
+    if (used.has(q.key)) continue;
+    used.add(q.key);
+    generated.push(q);
+  }
+
+  const quiz = shuffle([...curated, ...generated]).slice(0, total);
+  // 어린 나이는 숫자 보기에 점 개수를 함께 보여준다.
+  quiz.forEach((q) => {
+    q.dots = age <= 5 && q.choiceStyle === "number";
+  });
+  return quiz;
+}
+
+// 한 문제만 필요할 때. 가끔 상식 문제를 섞는다.
+function buildSingleQuestion(age) {
+  if (Math.random() < 0.3) {
+    const pool = curatedForAge(age);
+    if (pool.length) return pick(pool);
+  }
+  const q = pick(generatorsForAge(age))();
+  q.dots = age <= 5 && q.choiceStyle === "number";
+  return q;
+}
+
+// 다같이 푸는 보너스 문제는 가장 큰 아이 기준으로 만든다.
+function buildBonus(maxAge) {
+  const generators = generatorsForAge(maxAge);
+  const q = pick(generators)();
+  q.dots = maxAge <= 5 && q.choiceStyle === "number";
+  return q;
+}
+
+// ---- js/stories.js ----
+// 들려줄 이야기. 한 조각(segment)씩 읽어 주고, 끝에 간단한 질문과 이야깃거리를 준다.
+const STORIES = [
+  {
+    title: "용감한 병아리 삐약이",
+    emoji: "🐤",
+    segments: [
+      "노란 병아리 삐약이는 아직 아주 작았어요. 엄마 닭 뒤만 졸졸 따라다녔지요.",
+      "어느 날 바람이 쌩 불어서, 삐약이는 그만 엄마를 잃어버렸어요. 삐약삐약, 눈물이 나올 것 같았어요.",
+      "그때 연못에서 오리가 말했어요. 울지 마. 내가 같이 찾아 줄게.",
+      "삐약이와 오리는 헛간으로 갔어요. 거기 엄마 닭이 삐약이를 찾고 있었지요. 삐약이는 그날 처음으로 혼자서 용감해졌답니다."
+    ],
+    question: {
+      prompt: "삐약이를 도와준 친구는 누구였을까요?",
+      choices: ["오리", "고양이", "강아지"],
+      answer: 0
+    },
+    talk: "너희도 무서웠는데 용감해졌던 적 있어? 이야기해 줄래?"
+  },
+  {
+    title: "달을 따러 간 고양이",
+    emoji: "🌙",
+    segments: [
+      "고양이 나비는 밤마다 창밖의 동그란 달을 봤어요. 달이 꼭 맛있는 치즈 같았거든요.",
+      "나비는 지붕 위로 폴짝, 나무 위로 폴짝 올라갔어요. 그런데 아무리 올라가도 달은 그대로였어요.",
+      "지쳐서 웅덩이 옆에 앉았는데, 물속에도 달이 떠 있었어요. 나비는 앞발을 쑥 넣었어요. 첨벙!",
+      "달은 잡히지 않고 물만 튀었어요. 나비는 웃으며 생각했어요. 잡을 수 없어도 매일 볼 수 있으니 괜찮아."
+    ],
+    question: {
+      prompt: "나비는 달이 무엇처럼 보였다고 했을까요?",
+      choices: ["치즈", "공", "사탕"],
+      answer: 0
+    },
+    talk: "너희는 하늘에서 뭐가 제일 좋아? 달, 별, 구름 중에 골라 볼래?"
+  },
+  {
+    title: "느림보 거북이의 소풍",
+    emoji: "🐢",
+    segments: [
+      "거북이 도리는 바다 친구들과 소풍을 가기로 했어요. 그런데 도리는 아주 느렸지요.",
+      "물고기들은 벌써 저 앞에 가 있었어요. 도리야, 빨리 와! 도리는 숨이 찼어요.",
+      "그런데 천천히 가던 도리만 바위 밑에서 반짝이는 분홍 조개를 발견했어요.",
+      "도리가 조개를 보여 주자 친구들이 모여들었어요. 천천히 가면 더 많이 보이는구나! 모두 그날은 천천히 헤엄쳤답니다."
+    ],
+    question: {
+      prompt: "도리가 바위 밑에서 찾은 것은 무엇일까요?",
+      choices: ["분홍 조개", "보물 상자", "빨간 물고기"],
+      answer: 0
+    },
+    talk: "천천히 갔더니 좋은 걸 발견한 적 있어? 창밖에 지금 뭐가 보이는지도 말해 줄래?"
+  },
+  {
+    title: "숲속 빵집의 곰 아저씨",
+    emoji: "🐻",
+    segments: [
+      "숲속 빵집에는 곰 아저씨가 살아요. 아침마다 고소한 빵 냄새가 숲에 퍼지지요.",
+      "어느 날 비가 아주 많이 와서, 아무도 빵을 사러 오지 않았어요. 빵이 열 개나 남았어요.",
+      "곰 아저씨는 우산을 쓰고 빵을 들고 나갔어요. 다람쥐 집, 토끼 집, 부엉이 집 문을 똑똑 두드렸지요.",
+      "그날 숲속 모두가 따뜻한 빵을 먹었어요. 비 오는 날인데도 숲이 환해진 것 같았답니다."
+    ],
+    question: {
+      prompt: "곰 아저씨는 남은 빵을 어떻게 했을까요?",
+      choices: ["친구들에게 나눠 줬어요", "혼자 다 먹었어요", "버렸어요"],
+      answer: 0
+    },
+    talk: "누구한테 뭔가 나눠 준 적 있어? 무엇을 나눠 줬는지 말해 줄래?"
+  },
+  {
+    title: "우산을 반쪽 나눈 토끼",
+    emoji: "☔",
+    segments: [
+      "토끼 콩콩이는 노란 우산을 아주 좋아했어요. 비 오는 날만 기다렸지요.",
+      "드디어 비가 오는 날, 콩콩이는 우산을 쓰고 나갔어요. 그런데 길에서 젖은 생쥐를 만났어요.",
+      "생쥐는 부들부들 떨고 있었어요. 콩콩이는 우산을 쓱 기울여 생쥐 쪽을 덮어 주었어요.",
+      "둘은 한 우산 아래 나란히 걸었어요. 콩콩이 어깨는 조금 젖었지만, 마음은 하나도 안 추웠대요."
+    ],
+    question: {
+      prompt: "콩콩이의 우산은 무슨 색이었을까요?",
+      choices: ["노란색", "파란색", "빨간색"],
+      answer: 0
+    },
+    talk: "비 오는 날 제일 좋은 게 뭐야? 우산 소리? 웅덩이 밟기?"
+  },
+  {
+    title: "별을 세는 아기 부엉이",
+    emoji: "🦉",
+    segments: [
+      "아기 부엉이 호호는 밤마다 별을 셌어요. 하나, 둘, 셋... 그런데 자꾸 헷갈렸어요.",
+      "엄마 부엉이가 말했어요. 별은 너무 많아서 다 셀 수 없단다.",
+      "호호는 그럼 제일 예쁜 별 하나만 고르기로 했어요. 한참 보다가 제일 반짝이는 별을 찾았지요.",
+      "호호는 그 별에게 매일 밤 인사했어요. 안녕, 내 별. 그러자 별도 반짝, 하고 대답하는 것 같았대요."
+    ],
+    question: {
+      prompt: "호호는 별을 다 세는 대신 무엇을 했을까요?",
+      choices: ["제일 예쁜 별 하나를 골랐어요", "그냥 잤어요", "별을 그렸어요"],
+      answer: 0
+    },
+    talk: "지금 창밖에 뭐가 보여? 제일 마음에 드는 걸 하나 골라서 말해 줄래?"
+  }
+];
+
+// ---- js/english.js ----
+// 영어 놀이. 문제 모양은 questions.js와 같고, 영어로 읽어야 하는 부분만 lang: "en"으로 표시한다.
+const EN_WORDS = [
+  { emoji: "🐶", ko: "강아지", en: "dog" },
+  { emoji: "🐱", ko: "고양이", en: "cat" },
+  { emoji: "🐰", ko: "토끼", en: "rabbit" },
+  { emoji: "🐻", ko: "곰", en: "bear" },
+  { emoji: "🐤", ko: "병아리", en: "chick" },
+  { emoji: "🐘", ko: "코끼리", en: "elephant" },
+  { emoji: "🦁", ko: "사자", en: "lion" },
+  { emoji: "🐟", ko: "물고기", en: "fish" },
+  { emoji: "🍎", ko: "사과", en: "apple" },
+  { emoji: "🍌", ko: "바나나", en: "banana" },
+  { emoji: "🍓", ko: "딸기", en: "strawberry" },
+  { emoji: "🍇", ko: "포도", en: "grapes" },
+  { emoji: "🥕", ko: "당근", en: "carrot" },
+  { emoji: "🍞", ko: "빵", en: "bread" },
+  { emoji: "🥛", ko: "우유", en: "milk" },
+  { emoji: "🚗", ko: "자동차", en: "car" },
+  { emoji: "✈️", ko: "비행기", en: "airplane" },
+  { emoji: "🚌", ko: "버스", en: "bus" },
+  { emoji: "🏠", ko: "집", en: "house" },
+  { emoji: "🌳", ko: "나무", en: "tree" },
+  { emoji: "🌙", ko: "달", en: "moon" },
+  { emoji: "⭐", ko: "별", en: "star" },
+  { emoji: "☀️", ko: "해", en: "sun" },
+  { emoji: "☂️", ko: "우산", en: "umbrella" }
+];
+
+const EN_NUMBERS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+
+const EN_COLORS = [
+  { name: "빨간색", en: "red", hex: "#ef4444" },
+  { name: "파란색", en: "blue", hex: "#3b82f6" },
+  { name: "노란색", en: "yellow", hex: "#facc15" },
+  { name: "초록색", en: "green", hex: "#22c55e" },
+  { name: "보라색", en: "purple", hex: "#a855f7" },
+  { name: "주황색", en: "orange", hex: "#fb923c" },
+  { name: "분홍색", en: "pink", hex: "#f472b6" },
+  { name: "갈색", en: "brown", hex: "#a16207" }
+];
+
+const EN_PHRASES = [
+  { en: "Hello!", ko: "안녕!" },
+  { en: "Thank you!", ko: "고마워!" },
+  { en: "Good morning!", ko: "좋은 아침!" },
+  { en: "I am happy!", ko: "나는 행복해!" },
+  { en: "Let's play!", ko: "같이 놀자!" },
+  { en: "I love you!", ko: "사랑해!" },
+  { en: "Good night!", ko: "잘 자!" },
+  { en: "See you!", ko: "또 만나!" }
+];
+
+// 그림을 보고 영어 단어 고르기
+function enWordQuestion() {
+  const options = pickMany(EN_WORDS, 3);
+  const target = pick(options);
+  return {
+    kind: "enWord",
+    prompt: `${target.ko}${particle(target.ko, "은는")} 영어로 뭘까요?`,
+    visual: `<span>${target.emoji}</span>`,
+    visualClass: "visual-emoji",
+    choices: options.map((w) => w.en),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    choiceLang: "en",
+    key: `enWord-${target.en}`
+  };
+}
+
+// 영어를 듣고 그림 고르기
+function enListenQuestion() {
+  const options = pickMany(EN_WORDS, 4);
+  const target = pick(options);
+  return {
+    kind: "enListen",
+    prompt: `Where is the ${target.en}?`,
+    speakParts: [
+      { text: `Where is the ${target.en}?`, lang: "en" },
+      { text: "어떤 그림일까요?", lang: "ko" }
+    ],
+    visual: "👂",
+    visualClass: "visual-emoji",
+    choices: options.map((w) => w.emoji),
+    answer: options.indexOf(target),
+    choiceStyle: "emoji",
+    choiceLang: "en",
+    answerLabel: target.en,
+    key: `enListen-${target.en}`
+  };
+}
+
+// 숫자를 영어로
+function enNumberQuestion(max) {
+  const target = randInt(1, max || 10);
+  const pool = EN_NUMBERS.slice(1, (max || 10) + 1).filter((w) => w !== EN_NUMBERS[target]);
+  const options = shuffle([EN_NUMBERS[target], ...pickMany(pool, 2)]);
+  return {
+    kind: "enNumber",
+    prompt: `${target}${particle(target, "은는")} 영어로 뭘까요?`,
+    visual: `<span class="calc">${target}</span>`,
+    visualClass: "visual-calc",
+    choices: options,
+    answer: options.indexOf(EN_NUMBERS[target]),
+    choiceStyle: "text",
+    choiceLang: "en",
+    key: `enNumber-${target}`
+  };
+}
+
+// 색깔을 영어로
+function enColorQuestion() {
+  const options = pickMany(EN_COLORS, 3);
+  const target = pick(options);
+  return {
+    kind: "enColor",
+    prompt: "이 색깔은 영어로 뭘까요?",
+    visual: `<span class="swatch-big" style="background:${target.hex}"></span>`,
+    visualClass: "visual-swatch",
+    choices: options.map((c) => c.en),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    choiceLang: "en",
+    key: `enColor-${target.en}`
+  };
+}
+
+function buildEnglishQuestion(age) {
+  const builders = age <= 5
+    ? [enWordQuestion, enListenQuestion, enColorQuestion, () => enNumberQuestion(5)]
+    : [enWordQuestion, enListenQuestion, enColorQuestion, () => enNumberQuestion(10)];
+  return pick(builders)();
+}
+
+function pickPhrase() {
+  return pick(EN_PHRASES);
+}
+
+// ---- js/words.js ----
+// 끝말잇기용 낱말. 아이들이 아는 쉬운 명사 위주.
+// 끝 글자가 다시 여러 낱말의 첫 글자가 되도록(기·리·이·자·수·마·지·개·구·도·미·사…) 모아 두었다.
+const WORD_CHAIN = [
+  "가구", "가면", "가방", "가수", "가위", "가지", "감자", "강아지", "개구리", "개나리",
+  "개미", "거미", "거북이", "거울", "겨울", "고구마", "고기", "고래", "고사리", "고양이",
+  "고추", "공", "공기", "공주", "과자", "구두", "구름", "구슬", "국수", "국자",
+  "귤", "그네", "그림", "기구", "기사", "기와", "기자", "기차", "기타", "김밥",
+  "나리", "나무", "나비", "나사", "나이", "나팔", "낙타", "날개", "냄비", "냉장고",
+  "너구리", "노래", "다리", "다시마", "달", "달력", "당근", "대추", "도구", "도라지",
+  "도시", "도장", "도토리", "돌고래", "동물", "돼지", "두더지", "두부", "드레스", "딸기", "라디오",
+  "라면", "로봇", "루비", "리본", "리어카", "리코더", "마늘", "마루", "마을", "마차", "만두",
+  "매미", "머리", "모기", "모래", "모자", "목도리", "무기", "무지개", "문어", "물",
+  "물개", "물고기", "미끄럼틀", "미나리", "미소", "미역", "바구니", "바나나", "바다", "바람",
+  "바위", "바지", "박수", "박쥐", "반지", "밤", "방울", "배구", "배추", "백조",
+  "버섯", "버스", "벌레", "베개", "별", "병아리", "보리", "복숭아", "부엉이", "북",
+  "불고기", "비누", "비행기", "사과", "사다리", "사슴", "사자", "사탕", "산", "상자",
+  "새우", "색종이", "설탕", "소나기", "소리", "손수건", "수건", "수도", "수레", "수리",
+  "수박", "수영", "스키", "시계", "시소", "시장", "신발", "아기", "아이", "안경", "야구",
+  "야채", "양말", "얼음", "여우", "여자", "연필", "열쇠", "오리", "오이", "옥수수",
+  "우산", "우유", "운동", "원숭이", "유리", "의자", "이름", "이마", "이불", "이사",
+  "이야기", "인형", "자동차", "자두", "자리", "자석", "자전거", "장갑", "전화", "조개",
+  "장구", "장미", "종이", "주머니", "주스", "지구", "지도", "지붕", "지우개", "참새", "창문", "책",
+  "책상", "초록", "치마", "치약", "친구", "칠판", "침대", "카드", "코끼리", "콩",
+  "카메라", "키위", "타조", "탁자", "토끼", "토마토", "파도", "파리", "판다", "포도", "표범",
+  "피아노", "하늘", "하마", "학교", "한복", "해바라기", "햄버거", "호두", "호랑이", "호수",
+  "화분", "휴지"
+];
+
+// 첫 글자로 찾아보기 위한 색인
+const WORD_BY_FIRST = WORD_CHAIN.reduce((map, word) => {
+  const first = word[0];
+  (map[first] = map[first] || []).push(word);
+  return map;
+}, {});
+
+// 이 낱말 다음에 이어 붙일 수 있는 낱말들
+function chainOptions(word, used) {
+  const last = word[word.length - 1];
+  return (WORD_BY_FIRST[last] || []).filter((w) => w !== word && !(used || []).includes(w));
+}
+
+// 다음 말이 또 있는(놀이가 이어지는) 낱말을 우선 고른다.
+function chainPick(word, used) {
+  const options = chainOptions(word, used);
+  if (!options.length) return null;
+  const alive = options.filter((w) => chainOptions(w, [...(used || []), w]).length > 0);
+  return pick(alive.length ? alive : options);
+}
+
+// 두 번 이상 이어갈 수 있는 낱말로 시작한다.
+function chainStartWord(used) {
+  const candidates = WORD_CHAIN.filter((word) => {
+    const next = chainOptions(word, used);
+    return next.some((w) => chainOptions(w, [...(used || []), w]).length > 0);
+  });
+  return pick(candidates);
+}
+
+// ---- js/listen.js ----
+// 차 안에서 화면을 보지 않고 '귀로만' 풀 수 있는 문제들.
+// 보기는 모두 글자라서 TTS가 "1번 …, 2번 …" 하고 읽어 준다.
+
+const ANIMAL_SOUNDS = [
+  { sound: "멍멍", animal: "강아지" },
+  { sound: "야옹", animal: "고양이" },
+  { sound: "꿀꿀", animal: "돼지" },
+  { sound: "음메", animal: "소" },
+  { sound: "꽥꽥", animal: "오리" },
+  { sound: "짹짹", animal: "참새" },
+  { sound: "개굴개굴", animal: "개구리" },
+  { sound: "어흥", animal: "호랑이" },
+  { sound: "히잉", animal: "말" },
+  { sound: "삐약삐약", animal: "병아리" },
+  { sound: "매애", animal: "양" },
+  { sound: "찍찍", animal: "생쥐" }
+];
+
+const OPPOSITES = [
+  { word: "크다", answer: "작다", others: ["길다", "많다"] },
+  { word: "높다", answer: "낮다", others: ["넓다", "빠르다"] },
+  { word: "빠르다", answer: "느리다", others: ["무겁다", "짧다"] },
+  { word: "뜨겁다", answer: "차갑다", others: ["달다", "밝다"] },
+  { word: "밝다", answer: "어둡다", others: ["조용하다", "가볍다"] },
+  { word: "많다", answer: "적다", others: ["깊다", "두껍다"] },
+  { word: "길다", answer: "짧다", others: ["둥글다", "세다"] },
+  { word: "무겁다", answer: "가볍다", others: ["시끄럽다", "달다"] },
+  { word: "위", answer: "아래", others: ["옆", "앞"] },
+  { word: "앞", answer: "뒤", others: ["위", "밖"] },
+  { word: "안", answer: "밖", others: ["아래", "옆"] },
+  { word: "낮", answer: "밤", others: ["아침", "저녁"] },
+  { word: "여름", answer: "겨울", others: ["봄", "가을"] },
+  { word: "울다", answer: "웃다", others: ["자다", "먹다"] }
+];
+
+const RIDDLES = [
+  { hint: "노랗고 길쭉해요. 원숭이가 좋아하는 과일이에요.", answer: "바나나", others: ["사과", "수박"] },
+  { hint: "빨갛고 동그래요. 아삭아삭 소리가 나는 과일이에요.", answer: "사과", others: ["포도", "귤"] },
+  { hint: "하늘을 날아요. 사람을 아주 많이 태우고 멀리 가요.", answer: "비행기", others: ["자전거", "배"] },
+  { hint: "밤하늘에 떠 있어요. 반짝반짝 빛나는 아주 작은 불빛이에요.", answer: "별", others: ["구름", "눈"] },
+  { hint: "비가 올 때 머리 위에 펼쳐서 써요.", answer: "우산", others: ["모자", "장갑"] },
+  { hint: "코가 아주 길어요. 귀도 부채처럼 크고 몸집이 제일 커요.", answer: "코끼리", others: ["기린", "하마"] },
+  { hint: "목이 아주 길어요. 높은 나뭇잎을 먹어요.", answer: "기린", others: ["사자", "곰"] },
+  { hint: "하얗고 차가워요. 겨울에 하늘에서 내려와요.", answer: "눈", others: ["비", "바람"] },
+  { hint: "동그란 얼굴에 바늘이 두 개 있어요. 시간을 알려 줘요.", answer: "시계", others: ["거울", "그림"] },
+  { hint: "물속에서 살아요. 지느러미로 헤엄치고 아가미로 숨을 쉬어요.", answer: "물고기", others: ["다람쥐", "참새"] },
+  { hint: "노란색이고 낮에 하늘에서 아주 밝게 빛나요.", answer: "해", others: ["달", "별"] },
+  { hint: "발에 신어요. 밖에 나갈 때 꼭 신고 나가요.", answer: "신발", others: ["모자", "가방"] },
+  { hint: "알록달록 일곱 빛깔이에요. 비가 그친 뒤에 하늘에 떠요.", answer: "무지개", others: ["구름", "번개"] },
+  { hint: "흰 우유를 주는 동물이에요. 음메 하고 울어요.", answer: "소", others: ["말", "닭"] },
+  { hint: "책을 빌려 읽는 조용한 곳이에요.", answer: "도서관", others: ["시장", "공항"] },
+  { hint: "겨울잠을 자요. 꿀을 아주 좋아하는 동물이에요.", answer: "곰", others: ["여우", "토끼"] }
+];
+
+const NATIVE_PREFIX = ["", "한", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉", "열"];
+const NATIVE_NUMBER = ["", "하나", "둘", "셋", "넷", "다섯", "여섯", "일곱", "여덟", "아홉", "열"];
+
+function countWord(n, unit) {
+  return NATIVE_PREFIX[n] ? `${NATIVE_PREFIX[n]} ${unit}` : `${n}${unit}`;
+}
+
+function listenAnimalSound() {
+  const options = pickMany(ANIMAL_SOUNDS, 3);
+  const target = pick(options);
+  return {
+    kind: "listenSound",
+    prompt: `${target.sound} 하고 우는 동물은 누구일까요?`,
+    choices: options.map((o) => o.animal),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    audio: true,
+    key: `sound-${target.animal}`
+  };
+}
+
+function listenOpposite() {
+  const item = pick(OPPOSITES);
+  const options = shuffle([item.answer, ...item.others]);
+  return {
+    kind: "listenOpposite",
+    prompt: `"${item.word}"의 반대말은 무엇일까요?`,
+    speak: `${item.word}. 반대말은 무엇일까요?`,
+    choices: options,
+    answer: options.indexOf(item.answer),
+    choiceStyle: "text",
+    audio: true,
+    key: `opposite-${item.word}`
+  };
+}
+
+function listenRiddle() {
+  const item = pick(RIDDLES);
+  const options = shuffle([item.answer, ...item.others]);
+  return {
+    kind: "listenRiddle",
+    prompt: `${item.hint} 무엇일까요?`,
+    choices: options,
+    answer: options.indexOf(item.answer),
+    choiceStyle: "text",
+    audio: true,
+    key: `riddle-${item.answer}`
+  };
+}
+
+// 소리로 듣고 세는 셈. 어린 아이는 "세 개" 처럼 우리말 수로 읽어 준다.
+function listenCountAdd(age) {
+  const thing = pick(THINGS);
+  const max = age <= 5 ? 5 : 9;
+  const a = randInt(1, max - 1);
+  const b = randInt(1, Math.min(max - a, 4));
+  const sum = a + b;
+  const wrong = shuffle([sum + 1, sum - 1, sum + 2].filter((n) => n > 0 && n !== sum && n <= 10)).slice(0, 2);
+  const values = shuffle([sum, ...wrong]);
+  return {
+    kind: "listenCount",
+    prompt: `${thing.name}${particle(thing.name, "이가")} ${countWord(a, thing.unit)} 있는데 ${countWord(b, thing.unit)}를 더 주면 모두 몇 ${thing.unit}일까요?`,
+    choices: values.map((n) => countWord(n, thing.unit)),
+    answer: values.indexOf(sum),
+    choiceStyle: "text",
+    audio: true,
+    key: `listenCount-${thing.name}-${a}-${b}`
+  };
+}
+
+function listenNumberNext(age) {
+  if (age <= 6) {
+    const start = randInt(1, 5);
+    const answer = start + 3;
+    // 방금 부른 수를 함정으로 쓸 때도, 아예 다음 수들로만 낼 때도 있다
+    const distractors = Math.random() < 0.5 ? [answer - 1, answer + 1] : [answer + 1, answer + 2];
+    const options = shuffle([answer, ...distractors]);
+    return {
+      kind: "listenNext",
+      prompt: `${NATIVE_NUMBER[start]}, ${NATIVE_NUMBER[start + 1]}, ${NATIVE_NUMBER[start + 2]} 다음은 무엇일까요?`,
+      choices: options.map((n) => NATIVE_NUMBER[n] || String(n)),
+      answer: options.indexOf(answer),
+      choiceStyle: "text",
+      audio: true,
+      key: `listenNext-${start}`
+    };
+  }
+  const step = pick([2, 5, 10]);
+  const start = step * randInt(1, 4);
+  const answer = start + step * 3;
+  const options = shuffle([answer, answer + step, answer - step]);
+  return {
+    kind: "listenNext",
+    prompt: `${start}, ${start + step}, ${start + step * 2} 다음은 무엇일까요?`,
+    choices: options.map(String),
+    answer: options.indexOf(answer),
+    choiceStyle: "text",
+    audio: true,
+    key: `listenNextBig-${start}-${step}`
+  };
+}
+
+function listenMath(age) {
+  const max = age <= 6 ? 10 : (age <= 8 ? 20 : 100);
+  const plus = Math.random() < 0.6;
+  let a, b, result;
+  if (plus) {
+    a = randInt(1, max - 1);
+    b = randInt(1, max - a);
+    result = a + b;
+  } else {
+    a = randInt(2, max);
+    b = randInt(1, a - 1);
+    result = a - b;
+  }
+  const gap = max > 20 ? 10 : 1;
+  const options = shuffle([result, result + gap, Math.max(0, result - gap)]);
+  return {
+    kind: "listenMath",
+    prompt: plus ? `${a} 더하기 ${b}는 얼마일까요?` : `${a} 빼기 ${b}는 얼마일까요?`,
+    choices: [...new Set(options)].map(String),
+    answer: [...new Set(options)].indexOf(result),
+    choiceStyle: "text",
+    audio: true,
+    key: `listenMath-${a}-${b}-${plus}`
+  };
+}
+
+// 영어를 듣고 우리말 뜻 고르기
+function listenEnToKo() {
+  const options = pickMany(EN_WORDS, 3);
+  const target = pick(options);
+  return {
+    kind: "listenEnToKo",
+    prompt: `"${target.en}"은 무슨 뜻일까요?`,
+    speakParts: [
+      { text: target.en, lang: "en" },
+      { text: "무슨 뜻일까요?", lang: "ko" }
+    ],
+    choices: options.map((w) => w.ko),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    audio: true,
+    key: `enToKo-${target.en}`
+  };
+}
+
+// 우리말을 듣고 영어 단어 고르기
+function listenKoToEn() {
+  const options = pickMany(EN_WORDS, 3);
+  const target = pick(options);
+  return {
+    kind: "listenKoToEn",
+    prompt: `${target.ko}${particle(target.ko, "은는")} 영어로 뭘까요?`,
+    choices: options.map((w) => w.en),
+    answer: options.indexOf(target),
+    choiceStyle: "text",
+    choiceLang: "en",
+    audio: true,
+    key: `koToEn-${target.en}`
+  };
+}
+
+function buildListenQuestion(age) {
+  const builders = [listenAnimalSound, listenOpposite, listenRiddle, () => listenNumberNext(age)];
+  if (age <= 6) builders.push(() => listenCountAdd(age));   // 어린 아이는 우리말 수로 세기
+  if (age >= 6) builders.push(() => listenMath(age), () => listenMath(age));
+  return pick(builders)();
+}
+
+function buildListenEnglishQuestion() {
+  return pick([listenEnToKo, listenKoToEn])();
+}
+
+// ---- js/speech.js ----
+// 음성 안내(TTS).
+// 기기에 깔린 목소리 중 가장 자연스러운 것을 골라 쓰고, 긴 문장은 끊어 읽어 사람처럼 들리게 한다.
+// say("안녕") 또는 say([{ text: "dog", lang: "en" }, "강아지예요"], "happy") 형태로 호출한다.
+const Speech = (function () {
+  const synth = window.speechSynthesis || null;
+  const MUTE_KEY = "kidsquiz.muted";
+  const VOICE_KEY = "kidsquiz.voice";
+
+  let muted = Store.get(MUTE_KEY) === "1";
+  let allVoices = [];
+  const chosen = { ko: null, en: null };
+
+  // 목소리 이름으로 품질을 짐작한다. (기기가 품질을 알려 주지 않는다)
+  const HIGH = /(premium|enhanced|natural|neural|wavenet|studio|고품질)/i;
+  const NAMED = /(yuna|유나|siri|nari|sora|jimin|서현|지민)/i;
+  const LOW = /(compact|espeak|eloquence|novelty|robot)/i;
+
+  function scoreVoice(voice) {
+    const name = voice.name || "";
+    let score = 0;
+    if (HIGH.test(name)) score += 12;
+    if (NAMED.test(name)) score += 6;
+    if (/google/i.test(name)) score += 5;
+    if (LOW.test(name)) score -= 12;
+    if (voice.localService) score += 2;   // 차 안에서 인터넷 없이도 나오는 목소리
+    if (voice.default) score += 1;
+    return score;
+  }
+
+  function byLang(prefix) {
+    return allVoices.filter((v) => (v.lang || "").toLowerCase().startsWith(prefix));
+  }
+
+  function best(list) {
+    return list.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a))[0] || null;
+  }
+
+  function pickVoices() {
+    if (!synth) return;
+    allVoices = synth.getVoices() || [];
+    const saved = Store.get(VOICE_KEY);
+    const korean = byLang("ko");
+    chosen.ko = korean.find((v) => v.name === saved) || best(korean) || null;
+    chosen.en = best(byLang("en")) || null;
+  }
+
+  if (synth) {
+    pickVoices();
+    synth.addEventListener("voiceschanged", pickVoices);
+  }
+
+  // 말투. 기계음처럼 들리지 않게 높낮이는 과하지 않게 둔다.
+  const TONES = {
+    normal: { rate: 0.97, pitch: 1.03 },
+    warm: { rate: 0.9, pitch: 1.0 },     // 이야기하듯 천천히
+    happy: { rate: 1.0, pitch: 1.16 },   // 칭찬할 때
+    gentle: { rate: 0.93, pitch: 1.06 }  // 다독일 때
+  };
+
+  const EMOJI = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}]/gu;
+
+  function clean(text) {
+    return String(text).replace(EMOJI, " ").replace(/\s+/g, " ").trim();
+  }
+
+  // 마침표·물음표에서 끊어 읽으면 한 호흡에 쏟아내지 않아 훨씬 자연스럽다.
+  function toChunks(text) {
+    const out = [];
+    let buffer = "";
+    for (const ch of text) {
+      buffer += ch;
+      if (".!?…".includes(ch) || (buffer.length > 32 && ch === ",")) {
+        out.push(buffer);
+        buffer = "";
+      }
+    }
+    if (buffer.trim()) out.push(buffer);
+    return out.map((s) => s.trim()).filter(Boolean);
+  }
+
+  function utter(text, lang, tone) {
+    const isEn = lang === "en";
+    const preset = TONES[tone] || TONES.normal;
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = isEn ? "en-US" : "ko-KR";
+    u.rate = isEn ? preset.rate * 0.88 : preset.rate;   // 영어는 조금 더 또박또박
+    u.pitch = preset.pitch;
+    u.volume = 1;
+    const voice = isEn ? chosen.en : chosen.ko;
+    if (voice) u.voice = voice;
+    return u;
+  }
+
+  function say(parts, tone) {
+    if (!synth || muted) return;
+    const list = (Array.isArray(parts) ? parts : [parts])
+      .map((p) => (typeof p === "string" ? { text: p, lang: "ko" } : p))
+      .filter((p) => p && p.text);
+    if (!list.length) return;
+
+    synth.cancel();
+    list.forEach((part) => {
+      const text = clean(part.text);
+      if (!text) return;
+      const partTone = part.tone || tone;
+      const pieces = part.lang === "en" ? [text] : toChunks(text);
+      pieces.forEach((piece) => synth.speak(utter(piece, part.lang, partTone)));
+    });
+  }
+
+  function stop() {
+    if (synth) synth.cancel();
+  }
+
+  function toggleMute() {
+    muted = !muted;
+    Store.set(MUTE_KEY, muted ? "1" : "0");
+    if (muted) stop();
+    return muted;
+  }
+
+  // 목소리 고르기 화면에서 쓴다.
+  function koreanVoices() {
+    pickVoices();
+    return byLang("ko")
+      .slice()
+      .sort((a, b) => scoreVoice(b) - scoreVoice(a))
+      .map((v) => ({ name: v.name, local: v.localService, current: chosen.ko && v.name === chosen.ko.name }));
+  }
+
+  function setVoice(name) {
+    Store.set(VOICE_KEY, name);
+    pickVoices();
+  }
+
+  return {
+    say,
+    stop,
+    toggleMute,
+    isMuted: () => muted,
+    supported: !!synth,
+    koreanVoices,
+    setVoice,
+    currentVoice: () => (chosen.ko ? chosen.ko.name : null)
+  };
+})();
+
+// ---- js/app.js ----
+const app = document.getElementById("app");
+const soundToggle = document.getElementById("sound-toggle");
+
+const ROSTER_KEY = "kidsquiz.roster";
+const MODE_KEY = "kidsquiz.listenMode";
+const MAX_PLAYERS = 6;
+const MIN_AGE = 3;
+const MAX_AGE = 10;
+const DEFAULT_AGE = 6;
+const AVATARS = ["🦊", "🐻", "🐼", "🐯", "🐸", "🦄"];
+
+// 놀이 진행 순서. 끝까지 가면 다시 처음부터 돈다.
+const CYCLE = ["quiz", "quiz", "english", "wordchain", "quiz", "story", "quiz", "english", "phrase", "quiz", "wordchain", "story"];
+
+const state = {
+  players: [],      // 비어 있으면 '다같이' 모드
+  turnIndex: 0,
+  teamStars: 0,
+  planIndex: 0,
+  lastKind: null,
+  story: null,
+  storySeg: 0,
+  profileIndex: 0,
+  ageDraft: DEFAULT_AGE,
+  recent: [],
+  recentStories: [],
+  // 차 안에서는 화면을 안 보고 소리만 듣고 푸는 문제만 낸다.
+  listenMode: Store.get(MODE_KEY) !== "0",
+  chainWord: null,
+  chainUsed: [],
+  chainRound: 0
+};
+
+// 같은 칭찬만 반복하면 기계처럼 들려서, 매번 다르게 말해 준다.
+const PRAISE = [
+  "우와, 맞았어!",
+  "딩동댕! 잘했어!",
+  "오, 정확해!",
+  "정말 잘하는구나!",
+  "맞았어! 대단한걸?",
+  "그렇지! 바로 그거야!"
+];
+
+const CONSOLE_LINES = [
+  "아쉽다! 그래도 잘 들었어.",
+  "괜찮아, 이런 것도 있구나!",
+  "거의 다 왔는데! 괜찮아.",
+  "음, 아쉽다! 다음엔 맞힐 거야."
+];
+
+// ---- 공통 도우미 ----
+
+function escapeHtml(text) {
+  return String(text).replace(/[&<>"']/g, (c) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+}
+
+function vocative(name) {
+  return name + (hasBatchim(name) ? "아" : "야");
+}
+
+function avatarOf(index) {
+  return AVATARS[index % AVATARS.length];
+}
+
+// 가끔은 이름을 불러 준다. ("아린아, 우와 맞았어!")
+function praiseLine() {
+  const line = pick(PRAISE);
+  if (isTeamMode() || Math.random() < 0.5) return line;
+  return `${vocative(currentLabel())}, ${line}`;
+}
+
+function consoleLine() {
+  return pick(CONSOLE_LINES);
+}
+
+function isTeamMode() {
+  return state.players.length === 0;
+}
+
+function currentPlayer() {
+  return isTeamMode() ? null : state.players[state.turnIndex % state.players.length];
+}
+
+function currentAge() {
+  const player = currentPlayer();
+  return player ? player.age : DEFAULT_AGE;
+}
+
+function currentLabel() {
+  const player = currentPlayer();
+  return player ? player.name : "다같이";
+}
+
+function currentAvatar() {
+  return isTeamMode() ? "🧒" : avatarOf(state.turnIndex % state.players.length);
+}
+
+function addStar() {
+  const player = currentPlayer();
+  if (player) player.stars++;
+  else state.teamStars++;
+}
+
+function totalStars() {
+  return isTeamMode() ? state.teamStars : state.players.reduce((sum, p) => sum + p.stars, 0);
+}
+
+function advanceTurn() {
+  if (!isTeamMode()) state.turnIndex = (state.turnIndex + 1) % state.players.length;
+}
+
+function saveRoster() {
+  const roster = state.players.map((p) => ({ name: p.name, age: p.age }));
+  Store.set(ROSTER_KEY, JSON.stringify(roster));
+}
+
+function loadRoster() {
+  try {
+    const raw = JSON.parse(Store.get(ROSTER_KEY) || "[]");
+    return Array.isArray(raw) && raw.length ? raw : null;
+  } catch {
+    return null;
+  }
+}
+
+function bind(selector, handler, event) {
+  app.querySelectorAll(selector).forEach((el) => el.addEventListener(event || "click", handler));
+}
+
+function show(html) {
+  app.innerHTML = html;
+  app.scrollTop = 0;
+}
+
+let pendingTimer = null;
+let navLockUntil = 0;
+
+// 아이들이 버튼을 연타해도 화면이 두 칸씩 넘어가지 않게 한다.
+function navOnce(fn) {
+  return () => {
+    const now = Date.now();
+    if (now < navLockUntil) return;
+    navLockUntil = now + 400;
+    fn();
+  };
+}
+
+// 화면을 바꿀 때 예약된 진행을 취소한다. (남아 있으면 다음 화면을 건너뛰어 버린다)
+function goto(screen) {
+  Speech.stop();
+  if (pendingTimer) { clearTimeout(pendingTimer); pendingTimer = null; }
+  screen();
+}
+
+// 최근에 낸 문제는 잠시 피한다.
+function freshQuestion(builder) {
+  let question = builder();
+  for (let i = 0; i < 12 && state.recent.includes(question.key); i++) question = builder();
+  state.recent.push(question.key);
+  if (state.recent.length > 25) state.recent.shift();
+  return question;
+}
+
+function freshStory() {
+  let story = pick(STORIES);
+  for (let i = 0; i < 8 && state.recentStories.includes(story.title); i++) story = pick(STORIES);
+  state.recentStories.push(story.title);
+  if (state.recentStories.length > 3) state.recentStories.shift();
+  return story;
+}
+
+// ---- 시작 화면 ----
+
+function screenWelcome() {
+  const roster = loadRoster();
+  show(`
+    <section class="card center">
+      <div class="hero">🎈</div>
+      <h1 class="title">같이 놀자!</h1>
+      <p class="sub">퀴즈도 내고, 이야기도 들려주고,<br>영어도 알려줄게요.</p>
+      <button class="btn primary big" data-act="quick">바로 시작하기</button>
+      <button class="btn ghost" data-act="named">
+        이름 알려주고 시작하기
+        <span class="hint">이름을 알려주면 차례대로 불러 줄게요</span>
+      </button>
+      ${roster ? `
+        <button class="btn ghost small" data-act="resume">
+          지난번 친구들로 시작
+          <span class="hint">${escapeHtml(roster.map((p) => `${p.name}(${p.age}살)`).join(", "))}</span>
+        </button>` : ""}
+    </section>
+  `);
+
+  bind('[data-act="quick"]', () => {
+    state.players = [];
+    startSession();
+  });
+  bind('[data-act="named"]', () => {
+    state.players = [];
+    goto(screenCount);
+  });
+  bind('[data-act="resume"]', () => {
+    state.players = roster.map((p) => ({ name: p.name, age: p.age, stars: 0 }));
+    startSession();
+  });
+
+  Speech.say(["안녕! 나랑 같이 놀래?", "바로 시작하기를 눌러도 되고, 이름을 알려줘도 좋아."]);
+}
+
+function screenCount() {
+  const buttons = Array.from({ length: MAX_PLAYERS }, (_, i) => i + 1)
+    .map((n) => `<button class="count-btn" data-count="${n}"><span class="count-num">${n}</span><span class="count-label">명</span></button>`)
+    .join("");
+
+  show(`
+    <section class="card">
+      <h2 class="ask">지금 몇 명이 함께 있어?</h2>
+      <div class="count-grid">${buttons}</div>
+      <button class="btn ghost small" data-act="skip">그냥 다같이 놀기</button>
+    </section>
+  `);
+
+  bind("[data-count]", (e) => {
+    const count = Number(e.currentTarget.dataset.count);
+    state.players = Array.from({ length: count }, () => ({ name: "", age: DEFAULT_AGE, stars: 0 }));
+    state.profileIndex = 0;
+    goto(screenName);
+  });
+  bind('[data-act="skip"]', () => {
+    state.players = [];
+    startSession();
+  });
+
+  Speech.say("지금 몇 명이 함께 있어? 사람 수를 눌러 줘.");
+}
+
+function screenName() {
+  const index = state.profileIndex;
+  const roster = loadRoster() || [];
+  const chips = roster
+    .filter((p) => p.name)
+    .map((p) => `<button class="chip" data-name="${escapeHtml(p.name)}">${escapeHtml(p.name)}</button>`)
+    .join("");
+
+  show(`
+    <section class="card">
+      <p class="step">${index + 1}번째 친구</p>
+      <h2 class="ask">이름이 뭐야?</h2>
+      <input class="name-input" id="nameInput" type="text" maxlength="10" autocomplete="off" placeholder="이름을 적어 주세요">
+      ${chips ? `<div class="chips"><span class="chips-label">지난번 친구</span>${chips}</div>` : ""}
+      <button class="btn primary" data-act="next">다음</button>
+      <button class="btn ghost small" data-act="skip">이름 없이 그냥 놀기</button>
+    </section>
+  `);
+
+  const input = app.querySelector("#nameInput");
+  input.focus();
+
+  const submit = () => {
+    const name = input.value.trim();
+    if (!name) {
+      input.classList.add("shake");
+      setTimeout(() => input.classList.remove("shake"), 400);
+      Speech.say("이름을 적어 줘.");
+      return;
+    }
+    state.players[index].name = name;
+    state.ageDraft = DEFAULT_AGE;
+    goto(screenAge);
+  };
+
+  bind('[data-act="next"]', submit);
+  bind('[data-act="skip"]', () => {
+    state.players = [];
+    startSession();
+  });
+  bind(".chip", (e) => { input.value = e.currentTarget.dataset.name; });
+  input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
+
+  Speech.say(`${index + 1}번째 친구, 이름이 뭐야? 어른이 적어 줘도 좋아.`);
+}
+
+function screenAge() {
+  const player = state.players[state.profileIndex];
+  const name = player.name;
+
+  const draw = () => {
+    show(`
+      <section class="card">
+        <h2 class="ask">${escapeHtml(name)}${particle(name, "은는")} 몇 살이야?</h2>
+        <div class="stepper">
+          <button class="step-btn" data-delta="-1" aria-label="나이 줄이기">−</button>
+          <div class="age-display"><span class="age-num">${state.ageDraft}</span><span class="age-unit">살</span></div>
+          <button class="step-btn" data-delta="1" aria-label="나이 늘리기">＋</button>
+        </div>
+        <button class="btn primary" data-act="next">다음</button>
+      </section>
+    `);
+
+    bind("[data-delta]", (e) => {
+      state.ageDraft = Math.min(MAX_AGE, Math.max(MIN_AGE, state.ageDraft + Number(e.currentTarget.dataset.delta)));
+      draw();
+      Speech.say(`${state.ageDraft}살`);
+    });
+
+    bind('[data-act="next"]', () => {
+      player.age = state.ageDraft;
+      state.profileIndex++;
+      if (state.profileIndex < state.players.length) goto(screenName);
+      else { saveRoster(); startSession(); }
+    });
+  };
+
+  draw();
+  Speech.say(`${name}${particle(name, "은는")} 몇 살이야?`);
+}
+
+// ---- 놀이 진행 ----
+
+// 차 안에서 노는 동안 화면이 꺼지지 않게 한다.
+let wakeLock = null;
+
+async function keepAwake() {
+  if (!("wakeLock" in navigator) || wakeLock) return;
+  try {
+    wakeLock = await navigator.wakeLock.request("screen");
+    wakeLock.addEventListener("release", () => { wakeLock = null; });
+  } catch {
+    wakeLock = null;
+  }
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") keepAwake();
+});
+
+function startSession() {
+  keepAwake();
+  state.turnIndex = 0;
+  state.teamStars = 0;
+  state.planIndex = 0;
+  state.lastKind = null;
+  state.recent = [];
+  state.players.forEach((p) => { p.stars = 0; });
+  goto(screenHello);
+}
+
+function screenHello() {
+  const who = isTeamMode() ? "친구들" : state.players.map((p) => p.name).join(", ");
+  show(`
+    <section class="card center">
+      <div class="hero">👋</div>
+      <h2 class="title">안녕, ${escapeHtml(who)}!</h2>
+      <p class="sub">${isTeamMode() ? "오늘은 다같이 놀자." : "한 명씩 차례대로 물어볼게."}<br>퀴즈도 풀고, 이야기도 듣고, 영어도 해보자!</p>
+      <button class="btn primary big" data-act="go">좋아, 놀자!</button>
+    </section>
+  `);
+
+  bind('[data-act="go"]', navOnce(nextStep));
+  Speech.say([`안녕, ${who}!`, "오늘은 나랑 같이 놀자.", "퀴즈도 내고, 재미있는 이야기도 들려줄게."], "warm");
+}
+
+function nextStep() {
+  const kind = CYCLE[state.planIndex % CYCLE.length];
+  state.planIndex++;
+  runActivity(kind);
+}
+
+function runActivity(kind, skipIntro) {
+  const changed = kind !== state.lastKind;
+  state.lastKind = kind;
+  if (changed && !skipIntro && kind !== "quiz") goto(() => screenTransition(kind));
+  else goto(() => startActivity(kind));
+}
+
+function startActivity(kind) {
+  if (kind === "story") startStory();
+  else if (kind === "english") screenEnglish();
+  else if (kind === "phrase") screenPhrase();
+  else if (kind === "wordchain") startWordChain();
+  else screenQuiz();
+}
+
+function screenTransition(kind) {
+  const who = isTeamMode() ? "얘들아" : vocative(currentLabel());
+  const cards = {
+    story: { emoji: "📖", title: "이야기 들려줄게!", sub: "편하게 듣기만 하면 돼.", line: `${who}, 이번엔 재미있는 이야기 하나 들려줄게.` },
+    english: { emoji: "🔤", title: "이번엔 영어 놀이!", sub: "영어로 뭐라고 하는지 맞혀 보자.", line: `${who}, 이번엔 영어로 놀아 볼까?` },
+    phrase: { emoji: "🗣️", title: "따라 말하기!", sub: "내가 말하면 큰 소리로 따라 해 봐.", line: `${who}, 내가 하는 말을 따라 해 볼래?` },
+    wordchain: { emoji: "🔗", title: "끝말잇기 하자!", sub: "내가 말하면 이어지는 말을 골라 봐.", line: `${who}, 우리 끝말잇기 할까?` }
+  };
+  const card = cards[kind];
+
+  show(`
+    <section class="card center">
+      <div class="hero">${card.emoji}</div>
+      <h2 class="title">${card.title}</h2>
+      <p class="sub">${card.sub}</p>
+      <button class="btn primary big" data-act="go">좋아!</button>
+      <button class="btn ghost small" data-act="hub">다른 놀이 할래</button>
+    </section>
+  `);
+
+  bind('[data-act="go"]', navOnce(() => goto(() => startActivity(kind))));
+  bind('[data-act="hub"]', () => goto(screenHub));
+  Speech.say(card.line);
+}
+
+// ---- 문제 내기 ----
+
+function topBar() {
+  return `
+    <header class="quiz-top">
+      <button class="pill-btn" data-act="hub">🎪 놀이 바꾸기</button>
+      <span class="star-count">⭐ ${totalStars()}</span>
+      <button class="pill-btn" data-act="replay">🔊 다시</button>
+    </header>`;
+}
+
+function bindTopBar(onReplay) {
+  bind('[data-act="hub"]', () => goto(screenHub));
+  bind('[data-act="replay"]', onReplay);
+}
+
+function choiceHtml(q) {
+  return q.choices
+    .map((choice, i) => {
+      if (q.choiceStyle === "color") {
+        return `<button class="choice choice--color" data-i="${i}" style="background:${choice.hex}" aria-label="${choice.name}"></button>`;
+      }
+      if (q.choiceStyle === "shape") {
+        return `<button class="choice choice--shape" data-i="${i}">${choice}</button>`;
+      }
+      if (q.choiceStyle === "emoji") {
+        return `<button class="choice choice--emoji" data-i="${i}">${choice}</button>`;
+      }
+      if (q.choiceStyle === "group") {
+        return `<button class="choice choice--group" data-i="${i}">${choice}</button>`;
+      }
+      if (q.choiceStyle === "number") {
+        const n = Number(choice);
+        const dots = q.dots && n > 0 && n <= 12 ? `<span class="dotrow">${"●".repeat(n)}</span>` : "";
+        return `<button class="choice choice--number" data-i="${i}"><span class="digit">${choice}</span>${dots}</button>`;
+      }
+      return `<button class="choice choice--text" data-i="${i}"><span class="badge">${i + 1}</span>${escapeHtml(choice)}</button>`;
+    })
+    .join("");
+}
+
+function answerLabel(q) {
+  if (q.answerLabel) return q.answerLabel;
+  const correct = q.choices[q.answer];
+  if (q.choiceStyle === "color") return correct.name;
+  if (q.choiceStyle === "shape") {
+    const found = SHAPES.find((s) => s.glyph === correct);
+    return found ? found.name : "이 모양";
+  }
+  if (q.choiceStyle === "group") return "더 많은 쪽";
+  return correct;
+}
+
+function speakQuestion(q, prefix) {
+  const parts = [];
+  if (prefix) parts.push({ text: prefix, lang: "ko" });
+  if (q.speakParts) parts.push(...q.speakParts);
+  else parts.push({ text: q.speak || q.prompt, lang: "ko" });
+  // 글자·숫자 보기는 소리만 듣고도 고를 수 있게 번호와 함께 읽어 준다.
+  if (q.choiceStyle === "text" || q.choiceStyle === "number") {
+    q.choices.forEach((choice, i) => {
+      parts.push({ text: `${i + 1}번,`, lang: "ko" });
+      parts.push({ text: choice, lang: q.choiceLang || "ko" });
+    });
+  }
+  Speech.say(parts);
+}
+
+function markAnswer(q, picked) {
+  [...app.querySelectorAll(".choice")].forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === q.answer) btn.classList.add("correct");
+    else if (i === picked) btn.classList.add("wrong");
+  });
+}
+
+function askQuestion(q, options) {
+  const opts = options || {};
+  const label = currentLabel();
+  const prefix = (!isTeamMode() && opts.turn) ? `${vocative(label)},` : null;
+
+  show(`
+    <section class="quiz">
+      ${topBar()}
+      <div class="card quiz-card">
+        <p class="who-line">${currentAvatar()} ${escapeHtml(isTeamMode() ? "다같이!" : label + " 차례!")}</p>
+        ${q.visual ? `<div class="visual ${q.visualClass || ""}">${q.visual}</div>` : ""}
+        <h2 class="question">${escapeHtml(q.prompt)}</h2>
+        <div class="choices choices--${q.choiceStyle}">${choiceHtml(q)}</div>
+        ${state.listenMode ? '<button class="btn ghost small" id="revealBtn" data-act="reveal">🙉 정답 알려줘</button>' : ""}
+        <div class="feedback" id="feedback"></div>
+      </div>
+    </section>
+  `);
+
+  const hideReveal = () => {
+    const btn = app.querySelector("#revealBtn");
+    if (btn) btn.hidden = true;
+  };
+
+  bindTopBar(() => speakQuestion(q, prefix));
+
+  // 아무도 화면을 안 볼 때: 정답만 듣고 맞혔는지 스스로 알려 주는 길
+  bind('[data-act="reveal"]', navOnce(() => {
+    hideReveal();
+    [...app.querySelectorAll(".choice")].forEach((btn, i) => {
+      btn.disabled = true;
+      if (i === q.answer) btn.classList.add("correct");
+    });
+    const label = answerLabel(q);
+    app.querySelector("#feedback").innerHTML = `
+      <p class="fb ok">정답은 ${escapeHtml(label)}!</p>
+      <div class="fb-row">
+        <button class="btn primary" data-act="got">맞혔어! ⭐</button>
+        <button class="btn ghost" data-act="missed">아쉽다</button>
+      </div>
+    `;
+    Speech.say([
+      { text: "정답은", lang: "ko" },
+      { text: label, lang: q.choiceLang || "ko" },
+      { text: "맞혔어?", lang: "ko" }
+    ], "gentle");
+    bind('[data-act="got"]', navOnce(() => {
+      addStar();
+      finishTurn(opts);
+    }));
+    bind('[data-act="missed"]', navOnce(() => finishTurn(opts)));
+  }));
+
+  bind(".choice", (e) => {
+    hideReveal();
+    const picked = Number(e.currentTarget.dataset.i);
+    const correct = picked === q.answer;
+    markAnswer(q, picked);
+    if (correct) addStar();
+
+    const label2 = answerLabel(q);
+    const answerLang = q.choiceLang || "ko";
+    const line = correct ? praiseLine() : consoleLine();
+
+    app.querySelector("#feedback").innerHTML = `
+      <p class="fb ${correct ? "ok" : "no"}">${escapeHtml(correct ? `${line} 🎉` : `${line} 정답은 ${label2}!`)}</p>
+      <button class="btn primary" data-act="next">다음!</button>
+    `;
+    app.querySelector(".star-count").textContent = `⭐ ${totalStars()}`;
+
+    Speech.say(
+      correct
+        ? [{ text: line, lang: "ko" }, ...(answerLang === "en" ? [{ text: label2, lang: "en" }] : [])]
+        : [{ text: `${line} 정답은`, lang: "ko" }, { text: label2, lang: answerLang }],
+      correct ? "happy" : "gentle"
+    );
+
+    bind('[data-act="next"]', navOnce(() => finishTurn(opts)));
+  });
+
+  speakQuestion(q, prefix);
+}
+
+function finishTurn(opts) {
+  if (opts.onDone) opts.onDone();
+  else { advanceTurn(); nextStep(); }
+}
+
+function nextQuizQuestion() {
+  const age = currentAge();
+  if (!state.listenMode) return buildSingleQuestion(age);
+  if (Math.random() < 0.25) {
+    const bank = curatedForAge(age);
+    if (bank.length) return pick(bank);
+  }
+  return buildListenQuestion(age);
+}
+
+function screenQuiz() {
+  askQuestion(freshQuestion(nextQuizQuestion), { turn: true });
+}
+
+function screenEnglish() {
+  const build = state.listenMode
+    ? buildListenEnglishQuestion
+    : () => buildEnglishQuestion(currentAge());
+  askQuestion(freshQuestion(build), { turn: true });
+}
+
+// ---- 끝말잇기 ----
+
+function startWordChain() {
+  state.chainUsed = [];
+  state.chainRound = 0;
+  state.chainWord = chainStartWord([]);
+  state.chainUsed.push(state.chainWord);
+  screenWordChain(true);
+}
+
+function screenWordChain(first) {
+  const word = state.chainWord;
+  const last = word[word.length - 1];
+  const options = chainOptions(word, state.chainUsed);
+
+  if (!options.length || state.chainRound >= 4) {
+    goto(screenWordChainEnd);
+    return;
+  }
+
+  const correct = chainPick(word, state.chainUsed) || pick(options);
+  const distractors = shuffle(
+    WORD_CHAIN.filter((w) => w[0] !== last && !state.chainUsed.includes(w))
+  ).slice(0, 2);
+  const choices = shuffle([correct, ...distractors]);
+  const answer = choices.indexOf(correct);
+
+  show(`
+    <section class="quiz">
+      ${topBar()}
+      <div class="card quiz-card center">
+        <p class="who-line">🔗 끝말잇기</p>
+        <p class="chain-word">${escapeHtml(word)}</p>
+        <h2 class="question">"${escapeHtml(last)}"${roParticle(last)} 시작하는 말은?</h2>
+        <div class="choices choices--text">
+          ${choices.map((w, i) => `<button class="choice choice--text" data-i="${i}"><span class="badge">${i + 1}</span>${escapeHtml(w)}</button>`).join("")}
+        </div>
+        <div class="feedback" id="feedback"></div>
+      </div>
+    </section>
+  `);
+
+  const speakIt = () => Speech.say([
+    ...(first ? ["끝말잇기 하자! 내가 먼저 할게."] : []),
+    `${word}!`,
+    `${last}${roParticle(last)} 시작하는 말은 뭘까?`,
+    ...choices.map((w, i) => `${i + 1}번, ${w}.`)
+  ]);
+
+  bindTopBar(speakIt);
+  bind(".choice", (e) => {
+    const picked = Number(e.currentTarget.dataset.i);
+    const ok = picked === answer;
+    [...app.querySelectorAll(".choice")].forEach((btn, i) => {
+      btn.disabled = true;
+      if (i === answer) btn.classList.add("correct");
+      else if (i === picked) btn.classList.add("wrong");
+    });
+    if (ok) addStar();
+    app.querySelector(".star-count").textContent = `⭐ ${totalStars()}`;
+
+    state.chainUsed.push(correct);
+    state.chainRound++;
+
+    // 내 차례: 고른 낱말 뒤를 내가 이어 붙인다.
+    const myWord = chainPick(correct, state.chainUsed);
+    if (myWord) {
+      state.chainUsed.push(myWord);
+      state.chainWord = myWord;
+    }
+
+    const head = ok
+      ? `맞았어! ${correct}!`
+      : `${last}${roParticle(last)} 시작하는 말은 ${correct}${hasBatchim(correct) ? "이야" : "야"}!`;
+    const tail = myWord ? ` 그럼 나는 ${myWord}!` : " 여기서 끝! 잘했어!";
+
+    app.querySelector("#feedback").innerHTML = `
+      <p class="fb ${ok ? "ok" : "no"}">${escapeHtml(head + tail)}</p>
+      <button class="btn primary" data-act="next">${myWord ? "계속 이어가기" : "끝!"}</button>
+    `;
+    Speech.say([head + tail], ok ? "happy" : "gentle");
+
+    bind('[data-act="next"]', navOnce(() => {
+      if (myWord) goto(() => screenWordChain(false));
+      else goto(screenWordChainEnd);
+    }));
+  });
+
+  speakIt();
+}
+
+function screenWordChainEnd() {
+  const count = state.chainUsed.length;
+  show(`
+    <section class="card center">
+      <div class="hero">🔗</div>
+      <h2 class="title">${count}개나 이어갔어!</h2>
+      <p class="chain-trail">${state.chainUsed.map((w) => escapeHtml(w)).join(" → ")}</p>
+      <button class="btn primary big" data-act="next">다음 놀이!</button>
+    </section>
+  `);
+
+  bind('[data-act="next"]', navOnce(() => { advanceTurn(); nextStep(); }));
+  Speech.say([`우와, 낱말을 ${count}개나 이어갔어! 잘했어!`]);
+}
+
+// ---- 이야기 ----
+
+function startStory() {
+  state.story = freshStory();
+  state.storySeg = 0;
+  screenStory();
+}
+
+function screenStory() {
+  const story = state.story;
+  const segment = story.segments[state.storySeg];
+  const last = state.storySeg === story.segments.length - 1;
+
+  show(`
+    <section class="quiz">
+      ${topBar()}
+      <div class="card story-card">
+        <div class="story-emoji">${story.emoji}</div>
+        <h2 class="story-title">${escapeHtml(story.title)}</h2>
+        <p class="story-text">${escapeHtml(segment)}</p>
+        <p class="story-progress">${story.segments.map((_, i) => (i <= state.storySeg ? "●" : "○")).join(" ")}</p>
+        <button class="btn primary" data-act="next">${last ? "다 들었어!" : "그래서 어떻게 됐어?"}</button>
+      </div>
+    </section>
+  `);
+
+  bindTopBar(() => Speech.say(segment));
+  bind('[data-act="next"]', navOnce(() => {
+    if (last) goto(askStoryQuestion);
+    else { state.storySeg++; goto(screenStory); }
+  }));
+
+  Speech.say(state.storySeg === 0 ? [`${story.title}.`, segment] : segment, "warm");
+}
+
+function askStoryQuestion() {
+  const story = state.story;
+  askQuestion({
+    kind: "story",
+    prompt: story.question.prompt,
+    visual: `<span>${story.emoji}</span>`,
+    visualClass: "visual-emoji",
+    choices: story.question.choices,
+    answer: story.question.answer,
+    choiceStyle: "text",
+    key: `story-${story.title}`
+  }, { onDone: () => goto(screenStoryTalk) });
+}
+
+function screenStoryTalk() {
+  const story = state.story;
+  show(`
+    <section class="card center">
+      <div class="hero">💬</div>
+      <h2 class="title">우리 이야기해 볼까?</h2>
+      <p class="talk-text">${escapeHtml(story.talk)}</p>
+      <button class="btn primary big" data-act="next">이야기했어!</button>
+    </section>
+  `);
+
+  bind('[data-act="next"]', navOnce(() => { advanceTurn(); nextStep(); }));
+  Speech.say(story.talk, "warm");
+}
+
+// ---- 따라 말하기 ----
+
+function screenPhrase() {
+  const phrase = pickPhrase();
+  const speakIt = () => Speech.say([
+    { text: "따라 해 볼까?", lang: "ko" },
+    { text: phrase.en, lang: "en" },
+    { text: phrase.ko, lang: "ko" },
+    { text: phrase.en, lang: "en" }
+  ]);
+
+  show(`
+    <section class="quiz">
+      ${topBar()}
+      <div class="card center phrase-card">
+        <div class="hero">🗣️</div>
+        <p class="phrase-en">${escapeHtml(phrase.en)}</p>
+        <p class="phrase-ko">${escapeHtml(phrase.ko)}</p>
+        <button class="btn primary big" data-act="done">따라 했어요!</button>
+      </div>
+    </section>
+  `);
+
+  bindTopBar(speakIt);
+  bind('[data-act="done"]', (e) => {
+    e.currentTarget.disabled = true;
+    addStar();
+    app.querySelector(".star-count").textContent = `⭐ ${totalStars()}`;
+    Speech.say([{ text: pick(["잘했어! 멋지다!", "우와, 발음 좋은데?", "그렇지! 아주 좋아!"]), lang: "ko" }], "happy");
+    advanceTurn();
+    pendingTimer = setTimeout(nextStep, 900);
+  });
+
+  speakIt();
+}
+
+// ---- 놀이 고르기 / 마무리 ----
+
+function screenHub() {
+  const items = [
+    { kind: "quiz", emoji: "🔢", label: "퀴즈 풀기" },
+    { kind: "wordchain", emoji: "🔗", label: "끝말잇기" },
+    { kind: "story", emoji: "📖", label: "이야기 듣기" },
+    { kind: "english", emoji: "🔤", label: "영어 놀이" },
+    { kind: "phrase", emoji: "🗣️", label: "따라 말하기" }
+  ].map((item) => `
+    <button class="hub-btn" data-kind="${item.kind}">
+      <span class="hub-emoji">${item.emoji}</span>
+      <span class="hub-label">${item.label}</span>
+    </button>`).join("");
+
+  show(`
+    <section class="card center">
+      <h2 class="ask">무슨 놀이 할까?</h2>
+      <div class="hub-grid">${items}</div>
+      <button class="btn mode" data-act="mode">
+        ${state.listenMode ? "🚗 듣기 모드 (차 안에서)" : "👀 화면 모드 (그림 문제도)"}
+        <span class="hint">${state.listenMode ? "소리만 듣고 풀 수 있는 문제만 나와요" : "색깔·그림처럼 화면을 봐야 하는 문제도 나와요"}</span>
+      </button>
+      <button class="btn ghost small" data-act="voice">🎤 목소리 고르기</button>
+      <button class="btn ghost" data-act="back">계속 이어서 놀기</button>
+      <button class="btn ghost small" data-act="finish">오늘은 여기까지</button>
+    </section>
+  `);
+
+  bind('[data-act="voice"]', () => goto(screenVoice));
+
+  bind('[data-act="mode"]', () => {
+    state.listenMode = !state.listenMode;
+    Store.set(MODE_KEY, state.listenMode ? "1" : "0");
+    goto(screenHub);
+  });
+
+  bind("[data-kind]", (e) => {
+    const kind = e.currentTarget.dataset.kind;
+    goto(() => { state.lastKind = kind; startActivity(kind); });
+  });
+  bind('[data-act="back"]', navOnce(nextStep));
+  bind('[data-act="finish"]', () => goto(screenTally));
+
+  Speech.say("무슨 놀이 할까? 숫자 퀴즈, 이야기, 영어 놀이, 따라 말하기 중에 골라 봐.");
+}
+
+let voicePreview = false;
+
+function screenVoice() {
+  const voices = Speech.koreanVoices();
+
+  const list = voices.length
+    ? voices.map((v, i) => `
+        <button class="voice-btn ${v.current ? "current" : ""}" data-voice="${escapeHtml(v.name)}">
+          <span class="voice-name">${escapeHtml(v.name)}</span>
+          <span class="voice-tag">${v.current ? "지금 이 목소리" : "눌러서 들어보기"}</span>
+        </button>`).join("")
+    : `<p class="sub">이 기기에서 한국어 목소리를 찾지 못했어요.</p>`;
+
+  show(`
+    <section class="card center">
+      <div class="hero">🎤</div>
+      <h2 class="title">목소리 고르기</h2>
+      <p class="sub">눌러서 들어보고 마음에 드는 목소리를 고르세요.<br>
+        <small>폰 설정에서 고품질 한국어 음성을 받으면 훨씬 자연스러워요.</small></p>
+      <div class="voice-list">${list}</div>
+      <button class="btn primary" data-act="back">다 골랐어요</button>
+    </section>
+  `);
+
+  bind("[data-voice]", (e) => {
+    Speech.setVoice(e.currentTarget.dataset.voice);
+    voicePreview = true;
+    screenVoice();   // goto를 쓰면 방금 시작한 미리듣기가 끊긴다
+  });
+  bind('[data-act="back"]', () => goto(screenHub));
+
+  Speech.say(
+    voicePreview
+      ? ["안녕! 나는 이런 목소리야.", "오늘도 같이 재미있게 놀자!"]
+      : "어떤 목소리가 좋아? 눌러서 들어봐.",
+    "warm"
+  );
+  voicePreview = false;
+}
+
+function screenTally() {
+  const body = isTeamMode()
+    ? `<div class="stars">${"⭐".repeat(Math.min(state.teamStars, 10))}</div>
+       <h2 class="title">별 ${state.teamStars}개 모았어!</h2>`
+    : `<h2 class="title">오늘 이만큼 모았어!</h2>
+       <ul class="result-list">${state.players.map((p, i) => `
+         <li>
+           <span class="who">${avatarOf(i)} ${escapeHtml(p.name)} <small>${p.age}살</small></span>
+           <span class="tally">⭐ ${p.stars}</span>
+         </li>`).join("")}</ul>`;
+
+  show(`
+    <section class="card center">
+      <div class="hero">🏆</div>
+      ${body}
+      <p class="sub">다음에 또 놀자!</p>
+      <button class="btn primary big" data-act="more">더 놀래!</button>
+      <button class="btn ghost small" data-act="home">처음으로</button>
+    </section>
+  `);
+
+  bind('[data-act="more"]', navOnce(nextStep));
+  bind('[data-act="home"]', () => goto(screenWelcome));
+
+  const summary = isTeamMode()
+    ? `오늘 별 ${state.teamStars}개를 모았어!`
+    : state.players.map((p) => `${p.name}, 별 ${p.stars}개.`).join(" ");
+  Speech.say(["오늘 정말 잘했어!", summary, "다음에 또 놀자!"], "warm");
+}
+
+// ---- 시작 ----
+
+function updateSoundIcon() {
+  soundToggle.textContent = Speech.isMuted() ? "🔇" : "🔊";
+}
+
+soundToggle.addEventListener("click", () => {
+  Speech.toggleMute();
+  updateSoundIcon();
+});
+
+if (!Speech.supported) soundToggle.hidden = true;
+updateSoundIcon();
+goto(screenWelcome);
+
+</script>
+  
+</body>
+</html>

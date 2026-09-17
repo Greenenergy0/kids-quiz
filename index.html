@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>같이 놀자</title>
+
+  <meta name="theme-color" content="#7dd3fc">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="같이 놀자">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="app" class="app"></main>
+
+  <button id="sound-toggle" class="sound-toggle" type="button" aria-label="소리 켜기 끄기">🔊</button>
+
+  <script>
+    // 폰에는 콘솔이 없으니, 시작하다 막히면 빈 화면 대신 이유를 보여 준다.
+    window.addEventListener("error", function (event) {
+      var root = document.getElementById("app");
+      if (root && !root.innerHTML.trim()) {
+        root.innerHTML = '<section class="card"><h2 class="ask">앗, 여기서 막혔어요</h2>' +
+          '<p class="sub">' + String(event.message || event).replace(/</g, "&lt;") + '</p></section>';
+      }
+    });
+  </script>
+
+  <script src="js/store.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/stories.js"></script>
+  <script src="js/english.js"></script>
+  <script src="js/words.js"></script>
+  <script src="js/listen.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // 오프라인 사용을 위한 서비스워커. file://로 열었을 때는 건너뛴다.
+    if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
