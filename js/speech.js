@@ -91,24 +91,55 @@ const Speech = (function () {
     return u;
   }
 
-  function say(parts, tone) {
-    if (!synth || muted) return;
+  // 말이 다 끝난 뒤에 할 일(onDone). 말로 대답하기는 이때부터 듣기 시작한다.
+  let pendingDone = null;
+
+  function say(parts, tone, onDone) {
+    const finish = () => {
+      if (pendingDone === finish) {
+        pendingDone = null;
+        onDone();
+      }
+    };
+
+    if (!synth || muted) {
+      if (onDone) setTimeout(onDone, 0);
+      return;
+    }
+
     const list = (Array.isArray(parts) ? parts : [parts])
       .map((p) => (typeof p === "string" ? { text: p, lang: "ko" } : p))
       .filter((p) => p && p.text);
-    if (!list.length) return;
 
+    pendingDone = null;   // 이전 발화에 걸어 둔 콜백은 여기서 무효가 된다
     synth.cancel();
+
+    const queue = [];
     list.forEach((part) => {
       const text = clean(part.text);
       if (!text) return;
       const partTone = part.tone || tone;
       const pieces = part.lang === "en" ? [text] : toChunks(text);
-      pieces.forEach((piece) => synth.speak(utter(piece, part.lang, partTone)));
+      pieces.forEach((piece) => queue.push(utter(piece, part.lang, partTone)));
     });
+
+    if (!queue.length) {
+      if (onDone) setTimeout(onDone, 0);
+      return;
+    }
+
+    if (onDone) {
+      pendingDone = finish;
+      const last = queue[queue.length - 1];
+      last.onend = finish;
+      last.onerror = finish;
+    }
+
+    queue.forEach((u) => synth.speak(u));
   }
 
   function stop() {
+    pendingDone = null;
     if (synth) synth.cancel();
   }
 

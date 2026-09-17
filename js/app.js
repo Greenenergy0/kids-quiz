@@ -3,6 +3,7 @@ const soundToggle = document.getElementById("sound-toggle");
 
 const ROSTER_KEY = "kidsquiz.roster";
 const MODE_KEY = "kidsquiz.listenMode";
+const VOICE_ANSWER_KEY = "kidsquiz.voiceAnswer";
 const MAX_PLAYERS = 6;
 const MIN_AGE = 3;
 const MAX_AGE = 10;
@@ -26,6 +27,8 @@ const state = {
   recentStories: [],
   // 차 안에서는 화면을 안 보고 소리만 듣고 푸는 문제만 낸다.
   listenMode: Store.get(MODE_KEY) !== "0",
+  // 말로 대답하기. 마이크 권한이 필요해서 기본은 꺼짐.
+  voiceMode: Store.get(VOICE_ANSWER_KEY) === "1",
   chainWord: null,
   chainUsed: [],
   chainRound: 0
@@ -150,6 +153,7 @@ function navOnce(fn) {
 // 화면을 바꿀 때 예약된 진행을 취소한다. (남아 있으면 다음 화면을 건너뛰어 버린다)
 function goto(screen) {
   Speech.stop();
+  Mic.stop();
   if (pendingTimer) { clearTimeout(pendingTimer); pendingTimer = null; }
   screen();
 }
@@ -461,7 +465,7 @@ function answerLabel(q) {
   return correct;
 }
 
-function speakQuestion(q, prefix) {
+function speakQuestion(q, prefix, onDone) {
   const parts = [];
   if (prefix) parts.push({ text: prefix, lang: "ko" });
   if (q.speakParts) parts.push(...q.speakParts);
@@ -473,7 +477,7 @@ function speakQuestion(q, prefix) {
       parts.push({ text: choice, lang: q.choiceLang || "ko" });
     });
   }
-  Speech.say(parts);
+  Speech.say(parts, null, onDone);
 }
 
 function markAnswer(q, picked) {
@@ -498,6 +502,7 @@ function askQuestion(q, options) {
         <h2 class="question">${escapeHtml(q.prompt)}</h2>
         <div class="choices choices--${q.choiceStyle}">${choiceHtml(q)}</div>
         ${state.listenMode ? '<button class="btn ghost small" id="revealBtn" data-act="reveal">🙉 정답 알려줘</button>' : ""}
+        ${state.voiceMode && Mic.supported() ? '<p class="mic-line" id="micLine"></p>' : ""}
         <div class="feedback" id="feedback"></div>
       </div>
     </section>
@@ -537,9 +542,11 @@ function askQuestion(q, options) {
     bind('[data-act="missed"]', navOnce(() => finishTurn(opts)));
   }));
 
-  bind(".choice", (e) => {
+  // 손으로 누르든 말로 답하든 여기로 온다
+  const answerWith = (picked) => {
+    if (app.querySelector(".fb")) return;   // 이미 답한 문제
+    Mic.stop();
     hideReveal();
-    const picked = Number(e.currentTarget.dataset.i);
     const correct = picked === q.answer;
     markAnswer(q, picked);
     if (correct) addStar();
@@ -562,9 +569,56 @@ function askQuestion(q, options) {
     );
 
     bind('[data-act="next"]', navOnce(() => finishTurn(opts)));
-  });
+  };
 
-  speakQuestion(q, prefix);
+  bind(".choice", (e) => answerWith(Number(e.currentTarget.dataset.i)));
+
+  const listenAfterAsking = state.voiceMode && Mic.supported()
+    ? () => beginListening(q, answerWith, 1)
+    : null;
+
+  speakQuestion(q, prefix, listenAfterAsking);
+}
+
+// 문제를 다 읽어 준 뒤 아이 대답을 듣는다.
+function beginListening(q, answerWith, attempt) {
+  if (!state.voiceMode || !Mic.supported()) return;
+  if (app.querySelector(".fb")) return;
+  setMicLine("🎙️ 듣고 있어…");
+
+  Mic.start({
+    onHeard: (heard) => {
+      const picked = Mic.match(q, heard);
+      if (picked >= 0) {
+        Mic.stop();
+        setMicLine("");
+        answerWith(picked);
+      } else if (attempt < 2) {
+        setMicLine("잘 못 들었어! 다시 말해 줄래?");
+        Speech.say("잘 못 들었어. 다시 말해 줄래?", "gentle", () => beginListening(q, answerWith, attempt + 1));
+      } else {
+        setMicLine("화면을 눌러서 골라도 돼!");
+      }
+    },
+    onError: (err) => {
+      if (err === "no-speech" && attempt < 2) {
+        beginListening(q, answerWith, attempt + 1);
+        return;
+      }
+      if (err === "not-allowed" || err === "service-not-allowed") {
+        state.voiceMode = false;
+        Store.set(VOICE_ANSWER_KEY, "0");
+        setMicLine("마이크를 쓸 수 없어요. 화면을 눌러 주세요.");
+        return;
+      }
+      setMicLine("화면을 눌러서 골라도 돼!");
+    }
+  });
+}
+
+function setMicLine(text) {
+  const line = app.querySelector("#micLine");
+  if (line) line.textContent = text;
 }
 
 function finishTurn(opts) {
@@ -822,6 +876,13 @@ function screenHub() {
         ${state.listenMode ? "🚗 듣기 모드 (차 안에서)" : "👀 화면 모드 (그림 문제도)"}
         <span class="hint">${state.listenMode ? "소리만 듣고 풀 수 있는 문제만 나와요" : "색깔·그림처럼 화면을 봐야 하는 문제도 나와요"}</span>
       </button>
+      ${Mic.supported() ? `
+        <button class="btn mode" data-act="voiceanswer">
+          ${state.voiceMode ? "🎙️ 말로 대답하기 (켜짐)" : "🎙️ 말로 대답하기 (꺼짐)"}
+          <span class="hint">${state.voiceMode
+            ? "문제를 읽어 준 뒤 아이 말을 듣습니다. 화면을 눌러 답해도 돼요."
+            : "누르면 마이크로 대답할 수 있어요 (인터넷 필요)"}</span>
+        </button>` : ""}
       <button class="btn ghost small" data-act="voice">🎤 목소리 고르기</button>
       <button class="btn ghost" data-act="back">계속 이어서 놀기</button>
       <button class="btn ghost small" data-act="finish">오늘은 여기까지</button>
@@ -829,6 +890,21 @@ function screenHub() {
   `);
 
   bind('[data-act="voice"]', () => goto(screenVoice));
+
+  // 켜는 순간(손가락으로 누른 그때) 마이크 사용 권한을 물어봐야 한다
+  bind('[data-act="voiceanswer"]', async (e) => {
+    if (state.voiceMode) {
+      state.voiceMode = false;
+      Store.set(VOICE_ANSWER_KEY, "0");
+      goto(screenHub);
+      return;
+    }
+    e.currentTarget.disabled = true;
+    const allowed = await askMicPermission();
+    state.voiceMode = allowed;
+    Store.set(VOICE_ANSWER_KEY, allowed ? "1" : "0");
+    goto(allowed ? screenHub : screenMicDenied);
+  });
 
   bind('[data-act="mode"]', () => {
     state.listenMode = !state.listenMode;
@@ -844,6 +920,32 @@ function screenHub() {
   bind('[data-act="finish"]', () => goto(screenTally));
 
   Speech.say("무슨 놀이 할까? 숫자 퀴즈, 이야기, 영어 놀이, 따라 말하기 중에 골라 봐.");
+}
+
+async function askMicPermission() {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return true;
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    stream.getTracks().forEach((track) => track.stop());
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function screenMicDenied() {
+  show(`
+    <section class="card center">
+      <div class="hero">🎙️</div>
+      <h2 class="title">마이크를 못 쓰고 있어요</h2>
+      <p class="sub">말로 대답하려면 마이크 사용을 허용해야 해요.<br>
+        아이폰은 <strong>설정 → 사파리 → 마이크</strong>에서 허용으로 바꿔 주세요.</p>
+      <button class="btn primary big" data-act="back">화면 눌러서 놀기</button>
+    </section>
+  `);
+
+  bind('[data-act="back"]', () => goto(screenHub));
+  Speech.say("마이크를 못 쓰고 있어. 화면을 눌러서 대답해도 괜찮아!", "gentle");
 }
 
 let voicePreview = false;

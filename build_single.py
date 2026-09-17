@@ -20,6 +20,7 @@ JS = [
     "js/english.js",
     "js/words.js",
     "js/listen.js",
+    "js/mic.js",
     "js/speech.js",
     "js/app.js",
 ]
